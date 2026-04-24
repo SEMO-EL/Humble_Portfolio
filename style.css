@@ -340,6 +340,12 @@ body.cursor-hover .cursor {
   pointer-events: none;
 }
 
+.book-face[data-index="2"] img {
+  object-fit: contain;
+  object-position: center;
+  background: #1a1208;
+}
+
 .book-face-label {
   position: absolute;
   bottom: 0; left: 0; right: 0;
