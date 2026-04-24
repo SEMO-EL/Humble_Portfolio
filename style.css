@@ -431,6 +431,21 @@ body.cursor-hover .cursor {
   box-shadow: 0 24px 60px rgba(0,0,0,0.5);
 }
 
+/* PROJECT SCREENSHOTS */
+.project-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  min-height: 320px;
+  max-height: 420px;
+  transition: object-position 4s ease;
+}
+.project:hover .project-screenshot {
+  object-position: bottom;
+}
+
 /* SVVVD MOCK */
 .svvvd-hero-mock {
   background: #0c0c0c;
