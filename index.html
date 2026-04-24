@@ -34,19 +34,79 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-eyebrow">
-      <span class="line-accent"></span>
-      Designer · Builder · Creator
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="line-accent"></span>
+        Designer · Builder · Creator
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line" data-delay="0">BUILDING</span>
+        <span class="title-line italic" data-delay="80">Things</span>
+        <span class="title-line" data-delay="160">THAT WORK</span>
+      </h1>
+      <div class="hero-sub">
+        <p>UI/UX · 3D Tools · PWAs · Brand Design</p>
+        <p>Casablanca, Morocco</p>
+      </div>
     </div>
-    <h1 class="hero-title">
-      <span class="title-line" data-delay="0">BUILDING</span>
-      <span class="title-line italic" data-delay="80">Things</span>
-      <span class="title-line" data-delay="160">THAT WORK</span>
-    </h1>
-    <div class="hero-sub">
-      <p>UI/UX · 3D Tools · PWAs · Brand Design</p>
-      <p>Casablanca, Morocco</p>
+
+    <!-- 3D BOOK -->
+    <div class="book-wrapper" id="bookWrapper">
+      <div class="book-hint" id="bookHint">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h8M13 8l4 4-4 4"/></svg>
+        Drag to explore
+      </div>
+      <div class="book-scene" id="bookScene">
+        <div class="book" id="book">
+          <!-- FACE 0: SVVVD -->
+          <div class="book-face" data-index="0">
+            <img src="images/svvvd.png" alt="SVVVD Y2K" />
+            <div class="book-face-label">
+              <span class="bfl-num">01</span>
+              <span class="bfl-name">SVVVD Y2K</span>
+              <span class="bfl-tag">Fashion · Brand</span>
+            </div>
+          </div>
+          <!-- FACE 1: PoseSandbox -->
+          <div class="book-face" data-index="1">
+            <img src="images/posesandbox.png" alt="PoseSandbox" />
+            <div class="book-face-label">
+              <span class="bfl-num">02</span>
+              <span class="bfl-name">PoseSandbox</span>
+              <span class="bfl-tag">3D Tool · Three.js</span>
+            </div>
+          </div>
+          <!-- FACE 2: ArchaeoSmart -->
+          <div class="book-face" data-index="2">
+            <img src="images/archaeosmart.png" alt="ArchaeoSmart" />
+            <div class="book-face-label">
+              <span class="bfl-num">03</span>
+              <span class="bfl-name">ArchaeoSmart</span>
+              <span class="bfl-tag">PWA · Mobile</span>
+            </div>
+          </div>
+          <!-- FACE 3: Workspace OS -->
+          <div class="book-face" data-index="3">
+            <img src="images/workspace.png" alt="Workspace OS" />
+            <div class="book-face-label">
+              <span class="bfl-num">04</span>
+              <span class="bfl-name">Workspace OS</span>
+              <span class="bfl-tag">SaaS · Backend</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dots -->
+      <div class="book-dots" id="bookDots">
+        <span class="book-dot active" data-i="0"></span>
+        <span class="book-dot" data-i="1"></span>
+        <span class="book-dot" data-i="2"></span>
+        <span class="book-dot" data-i="3"></span>
+      </div>
+      <!-- Shadow -->
+      <div class="book-shadow"></div>
     </div>
+
     <div class="hero-scroll">
       <span>Scroll</span>
       <div class="scroll-line"></div>
