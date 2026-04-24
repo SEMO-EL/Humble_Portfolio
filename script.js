@@ -1,6 +1,150 @@
 /* ============================================================
-   SIMO PORTFOLIO — JS
+   3D BOOK INTERACTION
    ============================================================ */
+const book = document.getElementById('book');
+const bookScene = document.getElementById('bookScene');
+const bookDots = document.querySelectorAll('.book-dot');
+const bookHint = document.getElementById('bookHint');
+
+let isDragging = false;
+let startX = 0;
+let currentRotation = 0;
+let targetRotation = 0;
+let animFrame;
+let activeIndex = 0;
+let hintHidden = false;
+
+// Snap to nearest 90deg face
+function snapToFace(rot) {
+  return Math.round(rot / 90) * 90;
+}
+
+function getActiveIndex(rot) {
+  // Normalize rotation to 0-359
+  let n = ((-rot % 360) + 360) % 360;
+  return Math.round(n / 90) % 4;
+}
+
+function updateDots(index) {
+  bookDots.forEach(d => d.classList.remove('active'));
+  const active = document.querySelector(`.book-dot[data-i="${index}"]`);
+  if (active) active.classList.add('active');
+}
+
+function animateToTarget() {
+  currentRotation += (targetRotation - currentRotation) * 0.12;
+  book.style.transform = `rotateY(${currentRotation}deg) rotateX(-6deg)`;
+  const idx = getActiveIndex(currentRotation);
+  if (idx !== activeIndex) {
+    activeIndex = idx;
+    updateDots(activeIndex);
+  }
+  if (Math.abs(targetRotation - currentRotation) > 0.05) {
+    animFrame = requestAnimationFrame(animateToTarget);
+  } else {
+    currentRotation = targetRotation;
+    book.style.transform = `rotateY(${currentRotation}deg) rotateX(-6deg)`;
+  }
+}
+
+// MOUSE
+bookScene.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  startX = e.clientX;
+  cancelAnimationFrame(animFrame);
+  bookScene.style.cursor = 'grabbing';
+  if (!hintHidden) {
+    hintHidden = true;
+    bookHint.classList.add('hidden');
+  }
+});
+
+window.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  const dx = e.clientX - startX;
+  targetRotation = currentRotation + dx * 0.5;
+  book.style.transform = `rotateY(${targetRotation}deg) rotateX(-6deg)`;
+  const idx = getActiveIndex(targetRotation);
+  if (idx !== activeIndex) {
+    activeIndex = idx;
+    updateDots(activeIndex);
+  }
+});
+
+window.addEventListener('mouseup', (e) => {
+  if (!isDragging) return;
+  isDragging = false;
+  bookScene.style.cursor = 'grab';
+  const dx = e.clientX - startX;
+  // Snap + momentum
+  let snap = snapToFace(targetRotation + dx * 0.3);
+  targetRotation = snap;
+  currentRotation = parseFloat(book.style.transform.match(/rotateY\(([^d]+)/)?.[1] || currentRotation);
+  animateToTarget();
+});
+
+// TOUCH
+bookScene.addEventListener('touchstart', (e) => {
+  isDragging = true;
+  startX = e.touches[0].clientX;
+  cancelAnimationFrame(animFrame);
+  if (!hintHidden) {
+    hintHidden = true;
+    bookHint.classList.add('hidden');
+  }
+}, { passive: true });
+
+window.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  const dx = e.touches[0].clientX - startX;
+  targetRotation = currentRotation + dx * 0.5;
+  book.style.transform = `rotateY(${targetRotation}deg) rotateX(-6deg)`;
+  const idx = getActiveIndex(targetRotation);
+  if (idx !== activeIndex) {
+    activeIndex = idx;
+    updateDots(activeIndex);
+  }
+}, { passive: true });
+
+window.addEventListener('touchend', (e) => {
+  if (!isDragging) return;
+  isDragging = false;
+  const dx = e.changedTouches[0].clientX - startX;
+  let snap = snapToFace(targetRotation + dx * 0.3);
+  targetRotation = snap;
+  currentRotation = targetRotation - dx * 0.3;
+  animateToTarget();
+});
+
+// DOT CLICK — jump to face
+bookDots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    const i = parseInt(dot.dataset.i);
+    targetRotation = -i * 90;
+    // Shortest path
+    while (targetRotation - currentRotation > 180) targetRotation -= 360;
+    while (currentRotation - targetRotation > 180) targetRotation += 360;
+    cancelAnimationFrame(animFrame);
+    animateToTarget();
+  });
+});
+
+// AUTO-ROTATE on idle (pauses when user interacts)
+let autoRotateTimer;
+function startAutoRotate() {
+  autoRotateTimer = setInterval(() => {
+    if (!isDragging) {
+      targetRotation -= 90;
+      cancelAnimationFrame(animFrame);
+      animateToTarget();
+    }
+  }, 3000);
+}
+startAutoRotate();
+bookScene.addEventListener('mousedown', () => clearInterval(autoRotateTimer));
+bookScene.addEventListener('touchstart', () => clearInterval(autoRotateTimer), { passive: true });
+
+
 
 // CURSOR
 const cursor = document.getElementById('cursor');
