@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simo — Designer & Builder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">SIMO<span class="accent">.</span></div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      Available for projects
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow">
+      <span class="line-accent"></span>
+      Designer · Builder · Creator
+    </div>
+    <h1 class="hero-title">
+      <span class="title-line" data-delay="0">BUILDING</span>
+      <span class="title-line italic" data-delay="80">Things</span>
+      <span class="title-line" data-delay="160">THAT WORK</span>
+    </h1>
+    <div class="hero-sub">
+      <p>UI/UX · 3D Tools · PWAs · Brand Design</p>
+      <p>Casablanca, Morocco</p>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-bg-text">PORTFOLIO</div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="section-header">
+      <div class="section-label">
+        <span class="line-accent"></span>
+        Selected Work
+      </div>
+      <div class="section-count">04 Projects</div>
+    </div>
+
+    <!-- PROJECT 1: SVVVD -->
+    <article class="project project--svvvd" data-index="01">
+      <div class="project-meta">
+        <span class="project-num">01</span>
+        <span class="project-tag">Fashion · E-Commerce · Brand</span>
+        <span class="project-year">2026</span>
+      </div>
+      <div class="project-body">
+        <div class="project-info">
+          <h2 class="project-title">SVVVD<br><span class="italic">Y2K</span></h2>
+          <p class="project-desc">A full fashion brand and e-commerce site built from scratch. Y2K-influenced limited drops with a real cart system, order form pipeline, and brand identity — 35 total pieces across 3 colorways. Azul sold out.</p>
+          <div class="project-tags">
+            <span>HTML/CSS/JS</span>
+            <span>E-Commerce</span>
+            <span>Brand Design</span>
+            <span>Typography</span>
+          </div>
+          <a href="https://semo-el.github.io/SVVVD-Y2K/" target="_blank" class="project-link">
+            View Live <span class="arrow">↗</span>
+          </a>
+        </div>
+        <div class="project-visual project-visual--svvvd">
+          <div class="visual-frame">
+            <div class="svvvd-hero-mock">
+              <div class="svvvd-pill pill-1">SVVVD</div>
+              <div class="svvvd-pill pill-2">Y2K</div>
+              <div class="svvvd-tagline">WEAR IT<br>YOUR WAY</div>
+              <div class="svvvd-ticker">DROP 001 NOW LIVE ✦ RED FLAG ✦ AZUL ✦ PINKED ✦ 450 MAD ✦</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 2: PoseSandbox -->
+    <article class="project project--pose" data-index="02">
+      <div class="project-meta">
+        <span class="project-num">02</span>
+        <span class="project-tag">3D Tool · SaaS · Three.js</span>
+        <span class="project-year">2026</span>
+      </div>
+      <div class="project-body project-body--reverse">
+        <div class="project-info">
+          <h2 class="project-title">Pose<br><span class="italic">Sandbox</span></h2>
+          <p class="project-desc">A browser-based 3D character posing tool powered by Three.js. Artists rotate joints, add props, load references, and export PNG in seconds — no install needed. Ships with a Gumroad-powered pose pack store.</p>
+          <div class="project-tags">
+            <span>Three.js</span>
+            <span>3D / WebGL</span>
+            <span>Product Design</span>
+            <span>Monetized</span>
+          </div>
+          <a href="https://semo-el.github.io/PoseSandbox/" target="_blank" class="project-link">
+            View Live <span class="arrow">↗</span>
+          </a>
+        </div>
+        <div class="project-visual project-visual--pose">
+          <div class="visual-frame">
+            <div class="pose-mock">
+              <div class="pose-grid"></div>
+              <div class="pose-figure">
+                <div class="pf-head"></div>
+                <div class="pf-torso"></div>
+                <div class="pf-arm pf-arm-l"></div>
+                <div class="pf-arm pf-arm-r"></div>
+                <div class="pf-leg pf-leg-l"></div>
+                <div class="pf-leg pf-leg-r"></div>
+              </div>
+              <div class="pose-controls">
+                <span class="pc active">Rotate</span>
+                <span class="pc">Move</span>
+                <span class="pc">Orbit</span>
+                <span class="pc">Scale</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 3: ArchaeoSmart -->
+    <article class="project project--archeo" data-index="03">
+      <div class="project-meta">
+        <span class="project-num">03</span>
+        <span class="project-tag">PWA · Mobile · Field Tool</span>
+        <span class="project-year">2025–26</span>
+      </div>
+      <div class="project-body">
+        <div class="project-info">
+          <h2 class="project-title">Archaeo<br><span class="italic">Smart</span></h2>
+          <p class="project-desc">A mobile-first Progressive Web App for archaeological field recording. Voice capture, GPS tagging, QR label printing, canvas drawing, CSV export, map view, and a guided interview system — all client-side, no server needed.</p>
+          <div class="project-tags">
+            <span>PWA</span>
+            <span>Leaflet.js</span>
+            <span>Voice API</span>
+            <span>QR Scanning</span>
+            <span>FLL Project</span>
+          </div>
+          <a href="https://semo-el.github.io/ArchaeoSmart_V2/" target="_blank" class="project-link">
+            View Live <span class="arrow">↗</span>
+          </a>
+        </div>
+        <div class="project-visual project-visual--archeo">
+          <div class="visual-frame">
+            <div class="archeo-mock">
+              <div class="archeo-header">
+                <span class="archeo-logo">ArchaeoSmart</span>
+                <span class="archeo-version">v2.5.3</span>
+              </div>
+              <div class="archeo-stats">
+                <div class="astat"><span>3</span>Artifacts</div>
+                <div class="astat"><span>3</span>Sites</div>
+                <div class="astat"><span>0</span>Today</div>
+                <div class="astat"><span>3</span>Geo-tagged</div>
+              </div>
+              <div class="archeo-grid">
+                <div class="agrid-item">⚱ New Artifact</div>
+                <div class="agrid-item">🎤 Voice Capture</div>
+                <div class="agrid-item">◈ Archive</div>
+                <div class="agrid-item">⊞ Scan QR</div>
+                <div class="agrid-item">◎ Map View</div>
+                <div class="agrid-item">▦ Statistics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 4: Workspace OS -->
+    <article class="project project--workspace" data-index="04">
+      <div class="project-meta">
+        <span class="project-num">04</span>
+        <span class="project-tag">SaaS · Backend · Auth System</span>
+        <span class="project-year">2026</span>
+      </div>
+      <div class="project-body project-body--reverse">
+        <div class="project-info">
+          <h2 class="project-title">Workspace<br><span class="italic">OS</span></h2>
+          <p class="project-desc">A secure multi-tenant backend system with Supabase — full authentication, workspace creation, role-based access (Owner/Member), project & task management, invite codes, and audit logs. Real SaaS infrastructure.</p>
+          <div class="project-tags">
+            <span>Supabase</span>
+            <span>Auth</span>
+            <span>Multi-tenant</span>
+            <span>Role-based Access</span>
+          </div>
+          <div class="project-link project-link--disabled">
+            Private System
+          </div>
+        </div>
+        <div class="project-visual project-visual--workspace">
+          <div class="visual-frame">
+            <div class="ws-mock">
+              <div class="ws-header">
+                <span class="ws-title">Workspace OS</span>
+                <span class="ws-user">● elomaris310@gmail.com</span>
+              </div>
+              <div class="ws-body">
+                <div class="ws-sidebar">
+                  <div class="ws-label">WORKSPACE</div>
+                  <div class="ws-space active">Axa <span class="ws-role">Owner</span></div>
+                  <div class="ws-space">+ New</div>
+                </div>
+                <div class="ws-content">
+                  <div class="ws-stats">
+                    <div class="wstat"><span>1</span>Projects</div>
+                    <div class="wstat"><span>1</span>Tasks</div>
+                    <div class="wstat"><span>6</span>Logs</div>
+                  </div>
+                  <div class="ws-tasks">
+                    <div class="ws-task-item">
+                      <span class="ws-task-name">Powerpoint</span>
+                      <span class="ws-task-status done">done</span>
+                    </div>
+                    <div class="ws-task-item">
+                      <span class="ws-task-name">CIMA</span>
+                      <span class="ws-task-status">project</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-header">
+      <div class="section-label">
+        <span class="line-accent"></span>
+        About
+      </div>
+    </div>
+    <div class="about-body">
+      <div class="about-left">
+        <h2 class="about-title">I design & build<br><span class="italic">things that exist.</span></h2>
+        <p class="about-desc">Not mockups. Not concepts. Actual shipped products — tools artists use, apps archaeologists take into the field, fashion brands that sell out, backend systems running in production.</p>
+        <p class="about-desc">Based in Casablanca. Working across UI/UX, product engineering, 3D, and brand design. Currently a student building things on the side until "on the side" becomes the main thing.</p>
+      </div>
+      <div class="about-right">
+        <div class="skills-grid">
+          <div class="skill-block">
+            <span class="skill-label">Interface Design</span>
+            <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+          </div>
+          <div class="skill-block">
+            <span class="skill-label">Frontend Dev</span>
+            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="skill-block">
+            <span class="skill-label">3D / WebGL</span>
+            <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+          </div>
+          <div class="skill-block">
+            <span class="skill-label">Brand & Typography</span>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill-block">
+            <span class="skill-label">Backend / Supabase</span>
+            <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+          </div>
+          <div class="skill-block">
+            <span class="skill-label">PWA / Mobile</span>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span>HTML/CSS</span><span>JavaScript</span><span>Three.js</span><span>Supabase</span><span>Leaflet</span><span>Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-eyebrow">
+      <span class="line-accent"></span>
+      Let's talk
+    </div>
+    <h2 class="contact-title">Got a project?<br><span class="italic">Let's build it.</span></h2>
+    <div class="contact-links">
+      <a href="mailto:elomaris310@gmail.com" class="contact-item">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">elomaris310@gmail.com <span class="arrow">↗</span></span>
+      </a>
+      <div class="contact-divider"></div>
+      <a href="https://www.instagram.com/e.l.o.m.a.r.i__/" target="_blank" class="contact-item">
+        <span class="contact-label">Instagram</span>
+        <span class="contact-value">@e.l.o.m.a.r.i__ <span class="arrow">↗</span></span>
+      </a>
+    </div>
+    <div class="contact-bg-text">WORK<br>WITH ME</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>© 2026 Simo — All rights reserved</span>
+    <span>Casablanca, Morocco</span>
+    <span>Built from scratch</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
