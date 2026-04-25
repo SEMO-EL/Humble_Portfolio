@@ -272,6 +272,31 @@ body.cursor-hover .cursor { width: 64px; height: 64px; border-color: var(--fg); 
   color: var(--fg2);
 }
 
+.flow-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 14px;
+}
+.flow-line span {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--fg);
+  background: rgba(10,10,10,.45);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 10px;
+}
+.flow-line span:not(:last-child)::after {
+  content: '→';
+  color: var(--accent);
+  margin-left: 8px;
+}
+
 .project-tags { display:flex; flex-wrap:wrap; gap:8px; margin: 24px 0; }
 .project-tags span {
   font-family:var(--font-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
