@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simo — Designer & Builder</title>
+  <title>Simo — CS Student & Builder</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,24 +11,22 @@
 </head>
 <body>
 
-  <!-- CURSOR -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-dot" id="cursorDot"></div>
-
-  <!-- NOISE OVERLAY -->
   <div class="noise"></div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-logo">SIMO<span class="accent">.</span></div>
     <div class="nav-links">
+      <a href="#story">Story</a>
       <a href="#work">Work</a>
-      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-status">
       <span class="status-dot"></span>
-      Available for projects
+      11th Grade · Casablanca
     </div>
   </nav>
 
@@ -37,254 +35,437 @@
     <div class="hero-left">
       <div class="hero-eyebrow">
         <span class="line-accent"></span>
-        Designer · Builder · Creator
+        16 · Self-taught · CS-bound
       </div>
       <h1 class="hero-title">
-        <span class="title-line" data-delay="0">BUILDING</span>
-        <span class="title-line italic" data-delay="80">Things</span>
-        <span class="title-line" data-delay="160">THAT WORK</span>
+        <span class="title-line">BUILDING</span>
+        <span class="title-line italic">Real</span>
+        <span class="title-line">THINGS.</span>
       </h1>
-      <div class="hero-sub">
-        <p>UI/UX · 3D Tools · PWAs · Brand Design</p>
-        <p>Casablanca, Morocco</p>
+      <p class="hero-statement">
+        I started with robotics competitions at 12, built my first game during lockdown, and haven't stopped since. Every project on this page actually exists and does something real — no mockups, no tutorials, no hand-holding.
+      </p>
+      <div class="hero-pills">
+        <span>WRO 2023 · Panama</span>
+        <span>FLL 2026 · Houston</span>
+        <span>100% Self-taught</span>
       </div>
     </div>
 
     <!-- 3D BOOK -->
     <div class="book-wrapper" id="bookWrapper">
       <div class="book-hint" id="bookHint">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h8M13 8l4 4-4 4"/></svg>
-        Drag to explore
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h8M13 8l4 4-4 4"/></svg>
+        Drag to explore projects
       </div>
       <div class="book-scene" id="bookScene">
         <div class="book" id="book">
-          <!-- FACE 0: SVVVD -->
           <div class="book-face" data-index="0">
             <img src="images/svvvd.png" alt="SVVVD Y2K" />
             <div class="book-face-label">
               <span class="bfl-num">01</span>
               <span class="bfl-name">SVVVD Y2K</span>
-              <span class="bfl-tag">Fashion · Brand</span>
+              <span class="bfl-tag">Fashion · Brand · Real Sales</span>
             </div>
           </div>
-          <!-- FACE 1: PoseSandbox -->
           <div class="book-face" data-index="1">
             <img src="images/posesandbox.png" alt="PoseSandbox" />
             <div class="book-face-label">
               <span class="bfl-num">02</span>
               <span class="bfl-name">PoseSandbox</span>
-              <span class="bfl-tag">3D Tool · Three.js</span>
+              <span class="bfl-tag">3D Tool · Three.js · WebGL</span>
             </div>
           </div>
-          <!-- FACE 2: ArchaeoSmart -->
           <div class="book-face" data-index="2">
             <img src="images/archaeosmart.png" alt="ArchaeoSmart" />
             <div class="book-face-label">
               <span class="bfl-num">03</span>
               <span class="bfl-name">ArchaeoSmart</span>
-              <span class="bfl-tag">PWA · Mobile</span>
+              <span class="bfl-tag">PWA · FLL 2026 · Field Tool</span>
             </div>
           </div>
-          <!-- FACE 3: Workspace OS -->
           <div class="book-face" data-index="3">
             <img src="images/workspace.png" alt="Workspace OS" />
             <div class="book-face-label">
               <span class="bfl-num">04</span>
               <span class="bfl-name">Workspace OS</span>
-              <span class="bfl-tag">SaaS · Backend</span>
+              <span class="bfl-tag">SaaS · Supabase · Backend</span>
             </div>
           </div>
         </div>
       </div>
-      <!-- Dots -->
       <div class="book-dots" id="bookDots">
         <span class="book-dot active" data-i="0"></span>
         <span class="book-dot" data-i="1"></span>
         <span class="book-dot" data-i="2"></span>
         <span class="book-dot" data-i="3"></span>
       </div>
-      <!-- Shadow -->
       <div class="book-shadow"></div>
     </div>
 
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
+    <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
     <div class="hero-bg-text">PORTFOLIO</div>
+  </section>
+
+  <!-- STORY / TIMELINE -->
+  <section class="story" id="story">
+    <div class="section-header">
+      <div class="section-label"><span class="line-accent"></span>The Story</div>
+    </div>
+    <div class="story-body">
+      <div class="story-timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-left">
+            <span class="tl-year">Age 12–13</span>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-marker"></div>
+            <h3 class="tl-title">Robotics &amp; the first click</h3>
+            <p class="tl-text">Entered my first WRO (World Robot Olympiad) competition and got hooked — not just on robots, but on the loop of designing a system, testing it, watching it fail, and fixing it. That problem-solving rhythm became the thing I kept chasing.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-left">
+            <span class="tl-year">2020 · Lockdown</span>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-marker"></div>
+            <h3 class="tl-title">First real program</h3>
+            <p class="tl-text">Built a Mario-style 2D platformer during COVID lockdown. It was messy and barely worked — but it was mine. That was the moment I understood that software isn't something you consume, it's something you make.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-left">
+            <span class="tl-year">2023 · Panama</span>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-marker tl-marker--gold"></div>
+            <h3 class="tl-title">WRO International — first attempt <span class="tl-badge">🏆 National Winner</span></h3>
+            <p class="tl-text">Won Morocco's national WRO qualifiers on my very first attempt and competed internationally in Panama. Competing at that level showed me what's possible when you take something seriously — and how much I still had to learn.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-left">
+            <span class="tl-year">2024–25</span>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-marker"></div>
+            <h3 class="tl-title">Shifting to software</h3>
+            <p class="tl-text">Started teaching myself web development — no bootcamp, no school, just documentation, experimentation, and stubbornness. Built PoseSandbox as my first real web project because I wanted to make something functional that people would actually search for and find on their own.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-left">
+            <span class="tl-year">2026 · Houston</span>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-marker tl-marker--gold"></div>
+            <h3 class="tl-title">FLL International with LOGIKO <span class="tl-badge">🏆 1st Place Morocco</span></h3>
+            <p class="tl-text">Led team LOGIKO to first place at Morocco's FLL regional qualifiers, earning a spot at the international championship in Houston, Texas. As the eldest and only experienced member, I guided a team of first-timers through the full season — including building ArchaeoSmart as our innovation project from zero web knowledge.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-left">
+            <span class="tl-year">Now</span>
+            <div class="tl-line tl-line--end"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-marker tl-marker--now"></div>
+            <h3 class="tl-title">11th grade · Building everything</h3>
+            <p class="tl-text">Four shipped projects across 3D tools, PWAs, fashion e-commerce, and backend systems. Everything learned alone — a computer, some free time, and a lot of persistence. Heading toward computer science not because it's the safe answer, but because it's the thing that keeps pulling me back to the screen.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="story-aside">
+        <div class="aside-card reveal">
+          <span class="aside-label">My approach</span>
+          <p class="aside-text">"I built Workspace OS and SVVVD in a single day each. Not because I was fast — because I'd rather ship something real and fix it than plan forever and build nothing."</p>
+        </div>
+        <div class="aside-card reveal">
+          <span class="aside-label">Method</span>
+          <p class="aside-text">100% autodidact. No coding school, no bootcamp. Every concept learned by needing it for a project — not the other way around.</p>
+        </div>
+        <div class="aside-card reveal">
+          <span class="aside-label">Direction</span>
+          <p class="aside-text">Computer Science &amp; Software Engineering. The long-term path isn't fully clear yet — but I'm confident the skills compound, and I'm confident I'll figure it out along the way.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- WORK -->
   <section class="work" id="work">
     <div class="section-header">
-      <div class="section-label">
-        <span class="line-accent"></span>
-        Selected Work
-      </div>
+      <div class="section-label"><span class="line-accent"></span>Selected Work</div>
       <div class="section-count">04 Projects</div>
     </div>
 
-    <!-- PROJECT 1: SVVVD -->
-    <article class="project project--svvvd" data-index="01">
+    <!-- PROJECT 1: ArchaeoSmart (featured first — strongest story) -->
+    <article class="project project--archeo reveal">
       <div class="project-meta">
         <span class="project-num">01</span>
-        <span class="project-tag">Fashion · E-Commerce · Brand</span>
-        <span class="project-year">2026</span>
+        <span class="project-tag">PWA · Mobile · FLL Innovation Project</span>
+        <span class="project-year">2025–26</span>
       </div>
       <div class="project-body">
         <div class="project-info">
-          <h2 class="project-title">SVVVD<br><span class="italic">Y2K</span></h2>
-          <p class="project-desc">A full fashion brand and e-commerce site built from scratch. Y2K-influenced limited drops with a real cart system, order form pipeline, and brand identity — 35 total pieces across 3 colorways. Azul sold out.</p>
-          <div class="project-tags">
-            <span>HTML/CSS/JS</span>
-            <span>E-Commerce</span>
-            <span>Brand Design</span>
-            <span>Typography</span>
+          <h2 class="project-title">Archaeo<br><span class="italic">Smart</span></h2>
+          <div class="case-block">
+            <span class="case-label">The Problem</span>
+            <p>Archaeological field teams record findings on paper — fragile, unstructured, impossible to search or share. Our FLL innovation project was to build a solution that actually works in the field, offline, on a phone.</p>
           </div>
-          <a href="https://semo-el.github.io/SVVVD-Y2K/" target="_blank" class="project-link">
-            View Live <span class="arrow">↗</span>
-          </a>
+          <div class="case-block">
+            <span class="case-label">What I Built</span>
+            <p>A mobile-first Progressive Web App with voice-guided artifact recording, GPS geo-tagging, QR label generation and scanning, canvas drawing for site sketches, CSV data export, map view, and a statistics dashboard — entirely client-side, no server, works offline.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">Hardest Challenge</span>
+            <p>The guided voice form — the app asks questions, the user answers by speaking. Getting Web Speech API to work consistently across iOS and Android was brutal. Safari handles audio permissions completely differently from Chrome, and getting continuous recognition to not cut off mid-answer took weeks of refinement. We got it working.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">What I Learned</span>
+            <p>Building something real forces you to understand things you'd never look up voluntarily. I had zero web experience when this started — none of my teammates did either. The constraint of needing it to actually function in a field environment taught me more than any tutorial ever could.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">Limitations I'd Fix</span>
+            <p>Data lives in localStorage — gets lost if cleared. A proper sync layer with conflict resolution (CRDTs or similar) would make this production-ready. The voice form also still breaks on some Android builds.</p>
+          </div>
+          <div class="project-tags">
+            <span>HTML/CSS/JS</span><span>PWA</span><span>Leaflet.js</span><span>Web Speech API</span><span>QRCode.js</span><span>html5-qrcode</span><span>Canvas API</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://semo-el.github.io/ArchaeoSmart_V2/" target="_blank" class="project-link">View Live <span class="arrow">↗</span></a>
+            <a href="https://github.com/SEMO-EL/ArchaeoSmart_V2" target="_blank" class="project-link project-link--ghost">GitHub <span class="arrow">↗</span></a>
+          </div>
         </div>
-        <div class="project-visual project-visual--svvvd">
+        <div class="project-visual">
           <div class="visual-frame">
-            <img src="images/svvvd.png" alt="SVVVD Y2K website screenshot" class="project-screenshot" />
+            <img src="images/archaeosmart.png" alt="ArchaeoSmart" class="project-screenshot archeo-img" />
+          </div>
+          <div class="project-context-badge">
+            <span>🏆 FLL 2026 · 1st Place Morocco · Houston International</span>
           </div>
         </div>
       </div>
     </article>
 
     <!-- PROJECT 2: PoseSandbox -->
-    <article class="project project--pose" data-index="02">
+    <article class="project project--pose reveal">
       <div class="project-meta">
         <span class="project-num">02</span>
-        <span class="project-tag">3D Tool · SaaS · Three.js</span>
-        <span class="project-year">2026</span>
+        <span class="project-tag">3D Tool · WebGL · First Website Ever</span>
+        <span class="project-year">2024–25</span>
       </div>
       <div class="project-body project-body--reverse">
         <div class="project-info">
           <h2 class="project-title">Pose<br><span class="italic">Sandbox</span></h2>
-          <p class="project-desc">A browser-based 3D character posing tool powered by Three.js. Artists rotate joints, add props, load references, and export PNG in seconds — no install needed. Ships with a Gumroad-powered pose pack store.</p>
-          <div class="project-tags">
-            <span>Three.js</span>
-            <span>3D / WebGL</span>
-            <span>Product Design</span>
-            <span>Monetized</span>
+          <div class="case-block">
+            <span class="case-label">The Problem</span>
+            <p>Digital artists need 3D pose references but existing tools are expensive desktop software or clunky web ports. I wanted something fast, clean, and available the moment you open a browser tab — no install, no account.</p>
           </div>
-          <a href="https://semo-el.github.io/PoseSandbox/" target="_blank" class="project-link">
-            View Live <span class="arrow">↗</span>
-          </a>
+          <div class="case-block">
+            <span class="case-label">What I Built</span>
+            <p>A browser-based 3D character posing tool with Three.js. Users click joints, use a gizmo to rotate/move/scale, add props (cubes/spheres), load 2D reference images pinned to the camera, save poses as JSON, and export clean PNG screenshots instantly.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">Why Three.js</span>
+            <p>Raw WebGL was too low-level for a first 3D project. Three.js gave me a scene graph, lighting, and camera controls without writing shaders — which let me focus on the actual UX problem: making joint selection and manipulation feel intuitive in 3D space.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">Honest Outcome</span>
+            <p>Nobody bought the Gumroad pose pack. But designing a product, writing landing page copy, setting up pricing, and thinking about user acquisition taught me more about how software products work than the code itself did.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">What I'd Do Differently</span>
+            <p>The joint hierarchy is hardcoded — a proper skeletal rig with inverse kinematics would feel far more natural. I also underestimated how much users would need undo/redo history.</p>
+          </div>
+          <div class="project-tags">
+            <span>Three.js</span><span>WebGL</span><span>JavaScript</span><span>HTML Canvas</span><span>Gumroad</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://semo-el.github.io/PoseSandbox/" target="_blank" class="project-link">View Live <span class="arrow">↗</span></a>
+            <a href="https://github.com/SEMO-EL/PoseSandbox" target="_blank" class="project-link project-link--ghost">GitHub <span class="arrow">↗</span></a>
+          </div>
         </div>
-        <div class="project-visual project-visual--pose">
+        <div class="project-visual">
           <div class="visual-frame">
-            <img src="images/posesandbox.png" alt="PoseSandbox landing page screenshot" class="project-screenshot" />
+            <img src="images/posesandbox.png" alt="PoseSandbox" class="project-screenshot" />
+          </div>
+          <div class="project-context-badge">
+            <span>⚡ First website — built to be found, not just shared</span>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- PROJECT 3: ArchaeoSmart -->
-    <article class="project project--archeo" data-index="03">
+    <!-- PROJECT 3: SVVVD -->
+    <article class="project project--svvvd reveal">
       <div class="project-meta">
         <span class="project-num">03</span>
-        <span class="project-tag">PWA · Mobile · Field Tool</span>
-        <span class="project-year">2025–26</span>
+        <span class="project-tag">E-Commerce · Brand Design · Real Sales</span>
+        <span class="project-year">2026</span>
       </div>
       <div class="project-body">
         <div class="project-info">
-          <h2 class="project-title">Archaeo<br><span class="italic">Smart</span></h2>
-          <p class="project-desc">A mobile-first Progressive Web App for archaeological field recording. Voice capture, GPS tagging, QR label printing, canvas drawing, CSV export, map view, and a guided interview system — all client-side, no server needed.</p>
-          <div class="project-tags">
-            <span>PWA</span>
-            <span>Leaflet.js</span>
-            <span>Voice API</span>
-            <span>QR Scanning</span>
-            <span>FLL Project</span>
+          <h2 class="project-title">SVVVD<br><span class="italic">Y2K</span></h2>
+          <div class="case-block">
+            <span class="case-label">The Context</span>
+            <p>My cousin had a real fashion brand — Y2K-influenced streetwear — and needed a site that matched the energy of the clothes. This wasn't a practice project. Real products, real customers, real money changing hands.</p>
           </div>
-          <a href="https://semo-el.github.io/ArchaeoSmart_V2/" target="_blank" class="project-link">
-            View Live <span class="arrow">↗</span>
-          </a>
+          <div class="case-block">
+            <span class="case-label">What I Built</span>
+            <p>Full e-commerce site with cart system, size selection, live stock tracking (Azul colorway sold out), an order pipeline via email form, and a complete brand identity — typography, color palette, copy, layout. 35 pieces across 3 colorways: Red Flag, Azul, Pinked.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">The Constraint</span>
+            <p>Built in a single day. No framework, no template — HTML, CSS, and vanilla JS from scratch. The constraint forced fast prioritization: what does the user need to see first, what builds trust, what gets the sale.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">What It Taught Me</span>
+            <p>Design decisions are business decisions. Every layout choice, every line of copy, every color — it all affects whether someone buys or bounces. Engineering and design aren't separate disciplines.</p>
+          </div>
+          <div class="project-tags">
+            <span>HTML/CSS/JS</span><span>E-Commerce</span><span>Brand Identity</span><span>Typography</span><span>UX Writing</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://semo-el.github.io/SVVVD-Y2K/" target="_blank" class="project-link">View Live <span class="arrow">↗</span></a>
+            <a href="https://github.com/SEMO-EL/SVVVD-Y2K" target="_blank" class="project-link project-link--ghost">GitHub <span class="arrow">↗</span></a>
+          </div>
         </div>
-        <div class="project-visual project-visual--archeo">
+        <div class="project-visual">
           <div class="visual-frame">
-            <img src="images/archaeosmart.png" alt="ArchaeoSmart app screenshot" class="project-screenshot" />
+            <img src="images/svvvd.png" alt="SVVVD Y2K" class="project-screenshot" />
+          </div>
+          <div class="project-context-badge">
+            <span>👕 Real brand · Azul colorway sold out</span>
           </div>
         </div>
       </div>
     </article>
 
     <!-- PROJECT 4: Workspace OS -->
-    <article class="project project--workspace" data-index="04">
+    <article class="project project--workspace reveal">
       <div class="project-meta">
         <span class="project-num">04</span>
-        <span class="project-tag">SaaS · Backend · Auth System</span>
+        <span class="project-tag">SaaS · Backend · Deliberate Practice</span>
         <span class="project-year">2026</span>
       </div>
       <div class="project-body project-body--reverse">
         <div class="project-info">
           <h2 class="project-title">Workspace<br><span class="italic">OS</span></h2>
-          <p class="project-desc">A secure multi-tenant backend system with Supabase — full authentication, workspace creation, role-based access (Owner/Member), project & task management, invite codes, and audit logs. Real SaaS infrastructure.</p>
-          <div class="project-tags">
-            <span>Supabase</span>
-            <span>Auth</span>
-            <span>Multi-tenant</span>
-            <span>Role-based Access</span>
+          <div class="case-block">
+            <span class="case-label">Why I Built It</span>
+            <p>Every project I'd made before was purely frontend — no database, no auth, no server. I knew that gap would limit me. So I built something specifically to close it. Not because anyone asked, but because I needed to understand how backends actually work.</p>
           </div>
-          <div class="project-link project-link--disabled">
-            Private System
+          <div class="case-block">
+            <span class="case-label">What I Built</span>
+            <p>A multi-tenant SaaS workspace system: email/password authentication, workspace creation/deletion, role-based access (Owner vs Member), invite code system, project and task management with priority levels, and a full audit log. Built in a single day.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">Architecture</span>
+            <p>Supabase handles auth and a PostgreSQL database. Row-Level Security policies enforce that users can only access data in workspaces they belong to — security enforced at the database level, not just the frontend. This was the key insight: data access isn't just a UI problem.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">What I Learned</span>
+            <p>The hardest part wasn't the code — it was thinking in data relationships. Who owns what? How do you prevent a Member from deleting an Owner's project? These aren't coding questions, they're systems design questions. That shift in thinking was the whole point of the exercise.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">What I'd Add</span>
+            <p>Real-time collaboration using Supabase's websocket subscriptions, so multiple users see updates live without refreshing. Proper email-based invites rather than manual code sharing.</p>
+          </div>
+          <div class="project-tags">
+            <span>Supabase</span><span>PostgreSQL</span><span>Row-Level Security</span><span>JavaScript</span><span>Auth</span><span>Multi-tenant</span>
+          </div>
+          <div class="project-actions">
+            <div class="project-link project-link--disabled">Private System</div>
+            <a href="https://github.com/SEMO-EL" target="_blank" class="project-link project-link--ghost">GitHub <span class="arrow">↗</span></a>
           </div>
         </div>
-        <div class="project-visual project-visual--workspace">
+        <div class="project-visual">
           <div class="visual-frame">
-            <img src="images/workspace.png" alt="Workspace OS screenshot" class="project-screenshot" />
+            <img src="images/workspace.png" alt="Workspace OS" class="project-screenshot" />
+          </div>
+          <div class="project-context-badge">
+            <span>🧠 Built in 1 day — deliberately, to learn backends</span>
           </div>
         </div>
       </div>
     </article>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
+  <!-- SKILLS -->
+  <section class="skills-section" id="skills">
     <div class="section-header">
-      <div class="section-label">
-        <span class="line-accent"></span>
-        About
-      </div>
+      <div class="section-label"><span class="line-accent"></span>Technical Skills</div>
     </div>
-    <div class="about-body">
-      <div class="about-left">
-        <h2 class="about-title">I design & build<br><span class="italic">things that exist.</span></h2>
-        <p class="about-desc">Not mockups. Not concepts. Actual shipped products — tools artists use, apps archaeologists take into the field, fashion brands that sell out, backend systems running in production.</p>
-        <p class="about-desc">Based in Casablanca. Working across UI/UX, product engineering, 3D, and brand design. Currently a student building things on the side until "on the side" becomes the main thing.</p>
-      </div>
-      <div class="about-right">
-        <div class="skills-grid">
-          <div class="skill-block">
-            <span class="skill-label">Interface Design</span>
-            <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
-          </div>
-          <div class="skill-block">
-            <span class="skill-label">Frontend Dev</span>
-            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
-          </div>
-          <div class="skill-block">
-            <span class="skill-label">3D / WebGL</span>
-            <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
-          </div>
-          <div class="skill-block">
-            <span class="skill-label">Brand & Typography</span>
-            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
-          </div>
-          <div class="skill-block">
-            <span class="skill-label">Backend / Supabase</span>
-            <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
-          </div>
-          <div class="skill-block">
-            <span class="skill-label">PWA / Mobile</span>
-            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+    <div class="skills-body reveal">
+      <div class="skills-col">
+        <div class="skills-group">
+          <span class="sg-label">Comfortable with</span>
+          <div class="sg-items">
+            <span>HTML / CSS</span>
+            <span>Vanilla JavaScript</span>
+            <span>Responsive Design</span>
+            <span>PWA / Service Workers</span>
+            <span>Git / GitHub</span>
+            <span>UI/UX Design</span>
           </div>
         </div>
-        <div class="stack-row">
-          <span>HTML/CSS</span><span>JavaScript</span><span>Three.js</span><span>Supabase</span><span>Leaflet</span><span>Figma</span>
+        <div class="skills-group">
+          <span class="sg-label">Used in real projects</span>
+          <div class="sg-items">
+            <span>Three.js / WebGL</span>
+            <span>Supabase / PostgreSQL</span>
+            <span>Leaflet.js</span>
+            <span>Web Speech API</span>
+            <span>Canvas API</span>
+            <span>QR generation &amp; scanning</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <span class="sg-label">Currently learning</span>
+          <div class="sg-items">
+            <span>Python</span>
+            <span>Data structures &amp; algorithms</span>
+            <span>Systems architecture</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-col skills-col--right">
+        <div class="skills-stat-grid">
+          <div class="ss-item">
+            <span class="ss-num">4</span>
+            <span class="ss-label">Shipped projects</span>
+          </div>
+          <div class="ss-item">
+            <span class="ss-num">2</span>
+            <span class="ss-label">International competitions</span>
+          </div>
+          <div class="ss-item">
+            <span class="ss-num">1</span>
+            <span class="ss-label">National title (WRO)</span>
+          </div>
+          <div class="ss-item">
+            <span class="ss-num">0</span>
+            <span class="ss-label">Formal coding education</span>
+          </div>
+        </div>
+        <div class="skills-note">
+          <span class="line-accent"></span>
+          <p>Everything here was learned by needing it for a project. I don't study tools in advance — I pick up what each problem demands. That approach has been more effective for me than any structured curriculum.</p>
         </div>
       </div>
     </div>
@@ -292,11 +473,8 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="contact-eyebrow">
-      <span class="line-accent"></span>
-      Let's talk
-    </div>
-    <h2 class="contact-title">Got a project?<br><span class="italic">Let's build it.</span></h2>
+    <div class="contact-eyebrow"><span class="line-accent"></span>Get in touch</div>
+    <h2 class="contact-title">Have a question<br><span class="italic">or an opportunity?</span></h2>
     <div class="contact-links">
       <a href="mailto:elomaris310@gmail.com" class="contact-item">
         <span class="contact-label">Email</span>
@@ -307,15 +485,19 @@
         <span class="contact-label">Instagram</span>
         <span class="contact-value">@e.l.o.m.a.r.i__ <span class="arrow">↗</span></span>
       </a>
+      <div class="contact-divider"></div>
+      <a href="https://github.com/SEMO-EL" target="_blank" class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">SEMO-EL <span class="arrow">↗</span></span>
+      </a>
     </div>
-    <div class="contact-bg-text">WORK<br>WITH ME</div>
+    <div class="contact-bg-text">LET'S<br>TALK</div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
-    <span>© 2026 Simo — All rights reserved</span>
-    <span>Casablanca, Morocco</span>
-    <span>Built from scratch</span>
+    <span>© 2026 Simo</span>
+    <span>Casablanca, Morocco · 11th Grade</span>
+    <span>Built from scratch · No frameworks</span>
   </footer>
 
   <script src="script.js"></script>
