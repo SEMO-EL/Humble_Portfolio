@@ -275,7 +275,7 @@
     <article class="project project--pose reveal">
       <div class="project-meta">
         <span class="project-num">02</span>
-        <span class="project-tag">3D Tool · WebGL · First Website Ever</span>
+        <span class="project-tag">3D Tool · WebGL · Interactive Systems</span>
         <span class="project-year">2024–25</span>
       </div>
       <div class="project-body project-body--reverse">
@@ -283,35 +283,51 @@
           <h2 class="project-title">Pose<br><span class="italic">Sandbox</span></h2>
           <div class="case-block">
             <span class="case-label">The Problem</span>
-            <p>Digital artists need 3D pose references but existing tools are expensive desktop software or clunky web ports. I wanted something fast, clean, and available the moment you open a browser tab — no install, no account.</p>
+            <p>Digital artists need fast 3D pose references, but many tools are either expensive desktop software or clunky web ports. I wanted a browser-based tool that opens instantly, needs no account, and lets someone pose a character, add references, and export an image without friction.</p>
           </div>
           <div class="case-block">
             <span class="case-label">What I Built</span>
-            <p>A browser-based 3D character posing tool with Three.js. Users click joints, use a gizmo to rotate/move/scale, add props (cubes/spheres), load 2D reference images pinned to the camera, save poses as JSON, and export clean PNG screenshots instantly.</p>
+            <p>A browser-based 3D posing tool using Three.js. Users can click body joints, manipulate them with transform controls, add simple props, load 2D reference images pinned to the camera, save poses as JSON, and export clean PNG screenshots from the current canvas view.</p>
+          </div>
+          <div class="case-block case-block--system">
+            <span class="case-label">How The System Works</span>
+            <div class="system-grid">
+              <div><strong>UI Layer</strong><span>tool buttons, mode switching, save/load actions, reference image controls, and export triggers</span></div>
+              <div><strong>Interaction Layer</strong><span>mouse input is translated into 3D intent through raycasting, selected joints, and transform controls</span></div>
+              <div><strong>Render Layer</strong><span>Three.js manages the scene, camera, lights, body parts, props, and continuous redraw loop</span></div>
+            </div>
+            <p>The key engineering problem was not merely displaying a 3D model. It was turning a 2D user action — a click or drag on the screen — into a predictable 3D manipulation, while keeping camera movement, joint selection, and object transforms from fighting each other.</p>
+          </div>
+          <div class="case-block case-block--system">
+            <span class="case-label">Data Flow</span>
+            <div class="flow-line">
+              <span>Click</span>
+              <span>Raycast</span>
+              <span>Select joint</span>
+              <span>Transform</span>
+              <span>Render</span>
+              <span>Export / Save</span>
+            </div>
+            <p>A user click is raycast into the scene to detect the closest selectable joint. Once selected, transform controls update that joint's position or rotation, the scene re-renders from the active camera, and the current pose can either be serialized into JSON or captured as a PNG from the canvas.</p>
           </div>
           <div class="case-block">
             <span class="case-label">Why Three.js</span>
-            <p>Raw WebGL was too low-level for a first 3D project. Three.js gave me a scene graph, lighting, and camera controls without writing shaders — which let me focus on the actual UX problem: making joint selection and manipulation feel intuitive in 3D space.</p>
-          </div>
-          <div class="case-block case-block--system">
-            <span class="case-label">Interaction Model</span>
-            <div class="system-grid">
-              <div><strong>Scene</strong><span>camera, lights, model parts, props, and reference layers live in one 3D scene</span></div>
-              <div><strong>Selection</strong><span>users click joints, then transform controls apply rotation, movement, or scale</span></div>
-              <div><strong>Export</strong><span>poses are saved as JSON and screenshots are rendered from the current camera view</span></div>
-            </div>
-            <p>The hard part was not drawing a model; it was mapping a 2D mouse click into 3D intent and making the controls feel predictable enough that an artist could use them without reading instructions.</p>
+            <p>Raw WebGL would have forced me to spend most of the project on shaders, buffers, and low-level rendering. Three.js gave me a scene graph, camera controls, lighting, geometry, and loaders, so I could focus on the harder product problem: making 3D interaction feel understandable to a non-technical user.</p>
           </div>
           <div class="case-block">
-            <span class="case-label">Honest Outcome</span>
-            <p>Nobody bought the Gumroad pose pack. But designing a product, writing landing page copy, setting up pricing, and thinking about user acquisition taught me more about how software products work than the code itself did.</p>
+            <span class="case-label">Engineering Tradeoffs</span>
+            <p>The first version uses a manually structured joint hierarchy instead of a full skeletal rig. That made the project buildable as a first 3D web app, but it also limits realism: rotations can feel mechanical, and complex poses need more manual adjustment than they would with inverse kinematics.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">What I Learned Technically</span>
+            <p>Interactive tools are mostly state problems. The app has to know what is selected, which mode is active, whether the user is moving the camera or the model, what objects belong in the scene, and what state should be saved or exported. This taught me that UX and architecture are connected: confusing internal state creates confusing user experience.</p>
           </div>
           <div class="case-block">
             <span class="case-label">What I'd Do Differently</span>
-            <p>The joint hierarchy is hardcoded — a proper skeletal rig with inverse kinematics would feel far more natural. I also underestimated how much users would need undo/redo history, state snapshots, and performance guardrails for heavier models.</p>
+            <p>I would replace the hardcoded joint system with a proper skeletal rig and inverse kinematics, add undo/redo through state snapshots, separate rendering logic from UI logic more cleanly, and add performance guardrails for heavier models or more complex scenes.</p>
           </div>
           <div class="project-tags">
-            <span>Three.js</span><span>WebGL</span><span>JavaScript</span><span>HTML Canvas</span><span>Gumroad</span>
+            <span>Three.js</span><span>WebGL</span><span>Raycasting</span><span>Transform Controls</span><span>JavaScript</span><span>Canvas Export</span><span>JSON State</span>
           </div>
           <div class="project-actions">
             <a href="https://semo-el.github.io/PoseSandbox/" target="_blank" class="project-link">View Live <span class="arrow">↗</span></a>
@@ -323,7 +339,7 @@
             <img src="images/posesandbox.png" alt="PoseSandbox" class="project-screenshot" />
           </div>
           <div class="project-context-badge">
-            <span>⚡ First website — built to be found, not just shared</span>
+            <span>⚡ First website — an interactive 3D tool, not just a landing page</span>
           </div>
         </div>
       </div>
