@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simo — Builder, 16, Casablanca</title>
+  <meta name="description" content="Simo, a 16-year-old self-taught builder from Casablanca. Local AI systems, browser games, PWAs, backends and motion design: twelve projects, each with the reasoning behind it." />
+  <meta name="theme-color" content="#0c0b0a" />
+  <link rel="canonical" href="https://semo-el.github.io/Humble_Portfolio/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Simo — Building real things" />
+  <meta property="og:description" content="Local AI systems, browser games, PWAs, backends and motion design, from a 16-year-old builder in Casablanca." />
+  <meta property="og:url" content="https://semo-el.github.io/Humble_Portfolio/" />
+  <meta property="og:image" content="https://semo-el.github.io/Humble_Portfolio/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Apply the saved theme before first paint to avoid a flash -->
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('simo-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- ============================== NAV ============================== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner wrap">
+      <a class="logo" href="#top" aria-label="Simo, back to top">SIMO<span>.</span></a>
+
+      <nav class="nav-links" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#more">More</a>
+        <a href="#story">Story</a>
+        <a href="#approach">Approach</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <span class="status"><span class="status-dot" aria-hidden="true"></span>11th grade · Casablanca</span>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="Mobile">
+        <a href="#work">Work</a>
+        <a href="#more">More work</a>
+        <a href="#story">Story</a>
+        <a href="#approach">Approach</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero wrap" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span class="rule" aria-hidden="true"></span>16 · Self-taught · CS-bound</p>
+        <h1 class="hero-title">
+          <span class="line"><span>Building</span></span>
+          <span class="line"><span><em>real</em> things.</span></span>
+        </h1>
+        <p class="hero-lead reveal">
+          I build tools people actually use, then take apart the systems underneath them. Robotics taught me iteration,
+          the web taught me users, backends taught me who owns which data, and running half a dozen AI models on my own PC
+          this autumn taught me how many moving parts it takes to make one thing feel simple.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#work">See the work
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+        <ul class="hero-pills reveal" aria-label="Highlights">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg>WRO 2023 · Panama</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg>FLL 2026 · Houston</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v12H4zM9 7V4h6v3"/></svg>13 projects built</li>
+        </ul>
+      </div>
+
+      <div class="deck-wrap reveal" aria-roledescription="carousel" aria-label="Project previews">
+        <div class="deck" id="deck">
+          <a class="deck-card" href="#ironline" data-i="0">
+            <img src="images/ironline-match.webp" alt="Ironline first-person view at the start of a round, with minimap and HUD" width="1440" height="900" />
+            <span class="deck-meta"><b>01</b> Ironline <i>Browser FPS</i></span>
+          </a>
+          <a class="deck-card" href="#simoai" data-i="1">
+            <img src="images/simoai-auto.webp" alt="SimoAI answering a request with a written formula and a rendered circle diagram" width="1440" height="900" />
+            <span class="deck-meta"><b>02</b> SimoAI <i>Local AI</i></span>
+          </a>
+          <a class="deck-card" href="#sia" data-i="2">
+            <img src="images/sia-first-place.webp" alt="Frame from the SIA film: '1st place, trophy secured' over gold light rays" width="1600" height="900" />
+            <span class="deck-meta"><b>03</b> SIA films <i>Motion design</i></span>
+          </a>
+          <a class="deck-card" href="#mana" data-i="3">
+            <img src="images/mana-vessel-title.webp" alt="Mana Vessel title screen over a valley with a village and a river" width="1440" height="900" />
+            <span class="deck-meta"><b>04</b> Mana Vessel <i>3D RPG</i></span>
+          </a>
+          <a class="deck-card" href="#posesandbox" data-i="4">
+            <img src="images/posesandbox-app.webp" alt="PoseSandbox editor with a posable 3D figure on a grid" width="1600" height="829" />
+            <span class="deck-meta"><b>05</b> PoseSandbox <i>3D tool</i></span>
+          </a>
+          <a class="deck-card" href="#svvvd" data-i="5">
+            <img src="images/svvvd.webp" alt="SVVVD Y2K store homepage: 'Wear it your way'" width="1600" height="825" />
+            <span class="deck-meta"><b>06</b> SVVVD Y2K <i>E-commerce</i></span>
+          </a>
+        </div>
+        <div class="deck-ui">
+          <button class="icon-btn" id="deckPrev" type="button" aria-label="Previous project">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <p class="deck-hint" id="deckHint"><span>Drag, swipe or use the arrows</span></p>
+          <button class="icon-btn" id="deckNext" type="button" aria-label="Next project">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== TICKER ============================== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Local LLMs</span><span>Three.js</span><span>Node.js</span><span>Supabase</span><span>PWAs</span><span>Canvas</span><span>Web Audio</span><span>ComfyUI</span><span>Ollama</span><span>WebGL</span><span>Robotics</span><span>Brand design</span>
+        <span>Local LLMs</span><span>Three.js</span><span>Node.js</span><span>Supabase</span><span>PWAs</span><span>Canvas</span><span>Web Audio</span><span>ComfyUI</span><span>Ollama</span><span>WebGL</span><span>Robotics</span><span>Brand design</span>
+      </div>
+    </div>
+
+    <!-- ============================== NOW ============================== -->
+    <section class="now wrap" aria-labelledby="now-title">
+      <div class="now-head reveal">
+        <p class="label">Now · October 2026</p>
+        <h2 id="now-title" class="h-sm">What I'm working on</h2>
+      </div>
+      <ul class="now-list">
+        <li class="reveal"><span class="now-k">Building</span><span>SimoAI's next step: a video model I can prove is better, measured against the one it replaces on the same prompts.</span></li>
+        <li class="reveal"><span class="now-k">Learning</span><span>Python, data structures and algorithms, properly, so I can explain why my systems work and not just that they do.</span></li>
+        <li class="reveal"><span class="now-k">Practising</span><span>Directing AI coding agents like a team: tight briefs, real tests, and not accepting "done" until the result is checked.</span></li>
+      </ul>
+    </section>
+
+    <!-- ============================== SELECTED WORK ============================== -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="section-head wrap reveal">
+        <p class="label">(01) Selected work</p>
+        <h2 id="work-title" class="h-xl">Six projects,<br /><em>and the thinking behind them.</em></h2>
+        <p class="section-sub">Each one has a full case study: the problem, the system, what broke, and what I'd change.</p>
+      </div>
+
+      <!-- ---------- 01 SimoAI ---------- -->
+      <article class="case wrap" id="simoai" aria-labelledby="simoai-title">
+        <header class="case-top reveal">
+          <span class="case-num">01</span>
+          <span class="case-cat">Local AI · Multi-model system</span>
+          <span class="case-year">Sep – Oct 2026</span>
+        </header>
+        <div class="case-grid">
+          <div class="case-media reveal">
+            <figure class="shot shot-browser">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>localhost:3000</span></div>
+              <img src="images/simoai-auto.webp" alt="SimoAI in Auto mode: one request returns a written explanation of the circle area formula, then a rendered diagram" width="1440" height="900" loading="lazy" />
+            </figure>
+            <figure class="shot shot-phone">
+              <img src="images/simoai-mobile.webp" alt="SimoAI on a phone-sized screen showing the same conversation" width="390" height="844" loading="lazy" />
+            </figure>
+          </div>
+          <div class="case-body reveal">
+            <span class="badge badge-new">New</span>
+            <h3 id="simoai-title" class="case-title">SimoAI</h3>
+            <p class="case-lead">A private AI assistant that runs entirely on my own PC. It chats, writes code, reads PDFs, looks at images and generates pictures and short videos. A router model decides which specialist handles each part of a request.</p>
+            <dl class="facts">
+              <div><dt>6</dt><dd>local models, coordinated by one router</dd></div>
+              <div><dt>16&nbsp;GB</dt><dd>of GPU memory. Every model choice had to fit it</dd></div>
+              <div><dt>52/65</dt><dd>hidden test groups passed by the local coding model</dd></div>
+            </dl>
+            <p class="built"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.3L20 9l-4.4 3.8L17 18.5 12 15.6 7 18.5l1.4-5.7L4 9l5.8-.7Z"/></svg><span>Built with an AI coding agent (Codex). I was the product owner and tester: I chose every feature and reported every failure.</span></p>
+            <ul class="chips" aria-label="Stack"><li>Node.js</li><li>Ollama</li><li>ComfyUI</li><li>Qwen3</li><li>Gemma 3</li><li>FLUX</li><li>Wan 2.2</li><li>IndexedDB</li></ul>
+            <div class="case-actions">
+              <button class="btn btn-primary" type="button" data-case="simoai" aria-label="Read the SimoAI case study">Read the case study</button>
+              <span class="note-local"><span class="dot-local" aria-hidden="true"></span>Runs locally · not deployed</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- 02 Ironline ---------- -->
+      <article class="case case-flip wrap" id="ironline" aria-labelledby="ironline-title">
+        <header class="case-top reveal">
+          <span class="case-num">02</span>
+          <span class="case-cat">Game · Real-time simulation · 3D</span>
+          <span class="case-year">Sep – Oct 2026</span>
+        </header>
+        <div class="case-grid">
+          <div class="case-media reveal">
+            <figure class="shot shot-browser">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Ironline · Foundry</span></div>
+              <img src="images/ironline-match.webp" alt="Ironline gameplay: first-person pistol, a teammate, the A site sign, minimap, score and ability bar" width="1440" height="900" loading="lazy" />
+            </figure>
+            <figure class="shot shot-inset">
+              <img src="images/ironline-menu.webp" alt="Ironline main menu with robot agents standing on the map" width="1440" height="900" loading="lazy" />
+            </figure>
+          </div>
+          <div class="case-body reveal">
+            <span class="badge badge-new">New</span>
+            <h3 id="ironline-title" class="case-title">Ironline</h3>
+            <p class="case-lead">An original 5v5 tactical hero shooter that runs in the browser: three maps, five agents with four abilities each, nine weapons, a credit economy, bots from Easy to Elite and LAN multiplayer. Every model, icon and sound is generated in code.</p>
+            <dl class="facts">
+              <div><dt>128&nbsp;Hz</dt><dd>deterministic simulation, separate from rendering</dd></div>
+              <div><dt>290</dt><dd>automated tests (rules, weapons, bots, netcode), all passing</dd></div>
+              <div><dt>3·5·9</dt><dd>maps, agents and weapons, all original</dd></div>
+            </dl>
+            <p class="built"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.3L20 9l-4.4 3.8L17 18.5 12 15.6 7 18.5l1.4-5.7L4 9l5.8-.7Z"/></svg><span>Built with an AI coding agent (Claude Code). I set the design, the scope and the bar it had to clear. It grew out of an earlier prototype, <a href="#vector">Vector Strike</a>.</span></p>
+            <ul class="chips" aria-label="Stack"><li>TypeScript</li><li>Three.js</li><li>Vite</li><li>Web Audio</li><li>WebSockets</li><li>Vitest</li></ul>
+            <div class="case-actions">
+              <button class="btn btn-primary" type="button" data-case="ironline" aria-label="Read the Ironline case study">Read the case study</button>
+              <span class="note-local"><span class="dot-local" aria-hidden="true"></span>Runs locally · not deployed</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- 03 ArchaeoSmart ---------- -->
+      <article class="case wrap" id="archaeosmart" aria-labelledby="archaeosmart-title">
+        <header class="case-top reveal">
+          <span class="case-num">03</span>
+          <span class="case-cat">PWA · Mobile · FLL innovation project</span>
+          <span class="case-year">2025 – 26</span>
+        </header>
+        <div class="case-grid">
+          <div class="case-media case-media-phone reveal">
+            <figure class="shot shot-phone shot-phone-lg">
+              <img src="images/archaeosmart-mobile.webp" alt="ArchaeoSmart home screen on a phone: counters and six tool tiles" width="390" height="500" loading="lazy" />
+            </figure>
+            <div class="award">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg>
+              <p><b>FLL 2026: 1st place, Morocco</b><span>Qualified team LOGIKO for the international championship in Houston</span></p>
+            </div>
+          </div>
+          <div class="case-body reveal">
+            <h3 id="archaeosmart-title" class="case-title">ArchaeoSmart</h3>
+            <p class="case-lead">Field teams record archaeological finds on paper, which is fragile and impossible to search. ArchaeoSmart is a mobile-first PWA for recording finds by voice, with GPS tags, QR labels, sketches and offline storage. It works with no signal at all.</p>
+            <dl class="facts">
+              <div><dt>0</dt><dd>servers. Fully client-side, works offline</dd></div>
+              <div><dt>7</dt><dd>field tools: voice, GPS, QR, sketch, map, stats, CSV</dd></div>
+              <div><dt>Weeks</dt><dd>of work to make voice input reliable on iOS and Android</dd></div>
+            </dl>
+            <ul class="chips" aria-label="Stack"><li>HTML/CSS/JS</li><li>PWA</li><li>Leaflet.js</li><li>Web Speech API</li><li>QRCode.js</li><li>Canvas API</li></ul>
+            <div class="case-actions">
+              <button class="btn btn-primary" type="button" data-case="archaeosmart" aria-label="Read the ArchaeoSmart case study">Read the case study</button>
+              <a class="btn btn-ghost" href="https://semo-el.github.io/ArchaeoSmart_V2/" target="_blank" rel="noopener" aria-label="ArchaeoSmart: live site (opens in a new tab)">Live <span aria-hidden="true">↗</span></a>
+              <a class="btn btn-ghost" href="https://github.com/SEMO-EL/ArchaeoSmart_V2" target="_blank" rel="noopener" aria-label="ArchaeoSmart: GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- 04 Workspace OS ---------- -->
+      <article class="case case-flip wrap" id="workspace" aria-labelledby="workspace-title">
+        <header class="case-top reveal">
+          <span class="case-num">04</span>
+          <span class="case-cat">SaaS · Backend · Deliberate practice</span>
+          <span class="case-year">2026</span>
+        </header>
+        <div class="case-grid">
+          <div class="case-media reveal">
+            <figure class="shot shot-browser">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Workspace OS</span></div>
+              <img src="images/workspace-os.webp" alt="Workspace OS dashboard: workspaces with roles, invite codes, projects and tasks" width="1600" height="829" loading="lazy" />
+            </figure>
+          </div>
+          <div class="case-body reveal">
+            <h3 id="workspace-title" class="case-title">Workspace OS</h3>
+            <p class="case-lead">Everything I'd built before was frontend only, so I built a multi-tenant workspace app specifically to learn backends: authentication, roles, invite codes, projects, tasks and an audit log. Row-Level Security keeps every workspace's data isolated inside the database itself.</p>
+            <dl class="facts">
+              <div><dt>1&nbsp;day</dt><dd>to build. Deliberately, to close a gap</dd></div>
+              <div><dt>6</dt><dd>entities: users, workspaces, memberships, projects, tasks, logs</dd></div>
+              <div><dt>RLS</dt><dd>enforces permissions even if the UI is bypassed</dd></div>
+            </dl>
+            <ul class="chips" aria-label="Stack"><li>Supabase</li><li>PostgreSQL</li><li>Row-Level Security</li><li>Auth</li><li>JavaScript</li></ul>
+            <div class="case-actions">
+              <button class="btn btn-primary" type="button" data-case="workspace" aria-label="Read the Workspace OS case study">Read the case study</button>
+              <a class="btn btn-ghost" href="https://semo-el.github.io/Workspace_OS/" target="_blank" rel="noopener" aria-label="Workspace OS: Open app (opens in a new tab)">Open app <span aria-hidden="true">↗</span></a>
+              <a class="btn btn-ghost" href="https://github.com/SEMO-EL/Workspace_OS" target="_blank" rel="noopener" aria-label="Workspace OS: GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- 05 PoseSandbox ---------- -->
+      <article class="case wrap" id="posesandbox" aria-labelledby="posesandbox-title">
+        <header class="case-top reveal">
+          <span class="case-num">05</span>
+          <span class="case-cat">3D tool · WebGL · Interactive systems</span>
+          <span class="case-year">2024 – 25</span>
+        </header>
+        <div class="case-grid">
+          <div class="case-media reveal">
+            <figure class="shot shot-browser">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>semo-el.github.io/PoseSandbox</span></div>
+              <img src="images/posesandbox-app.webp" alt="PoseSandbox editor: selection, gizmo and reference panels next to a 3D figure" width="1600" height="829" loading="lazy" />
+            </figure>
+            <figure class="shot shot-inset">
+              <img src="images/posesandbox.webp" alt="PoseSandbox landing page: 'Pose faster. Create better.'" width="1600" height="829" loading="lazy" />
+            </figure>
+          </div>
+          <div class="case-body reveal">
+            <h3 id="posesandbox-title" class="case-title">PoseSandbox</h3>
+            <p class="case-lead">A browser-based 3D posing tool for artists. It opens instantly, needs no account, and lets you pose a figure, pin a reference image, add props, save the pose as JSON and export a clean PNG. My first website, and it was a tool rather than a landing page.</p>
+            <dl class="facts">
+              <div><dt>2D→3D</dt><dd>clicks turned into joint moves by raycasting</dd></div>
+              <div><dt>4</dt><dd>modes: rotate, move, orbit, scale (keys 1–4)</dd></div>
+              <div><dt>0</dt><dd>accounts or installs needed</dd></div>
+            </dl>
+            <ul class="chips" aria-label="Stack"><li>Three.js</li><li>WebGL</li><li>Raycasting</li><li>Transform controls</li><li>JSON state</li></ul>
+            <div class="case-actions">
+              <button class="btn btn-primary" type="button" data-case="posesandbox" aria-label="Read the PoseSandbox case study">Read the case study</button>
+              <a class="btn btn-ghost" href="https://semo-el.github.io/PoseSandbox/" target="_blank" rel="noopener" aria-label="PoseSandbox: live site (opens in a new tab)">Live <span aria-hidden="true">↗</span></a>
+              <a class="btn btn-ghost" href="https://github.com/SEMO-EL/PoseSandbox" target="_blank" rel="noopener" aria-label="PoseSandbox: GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- 06 SVVVD ---------- -->
+      <article class="case case-flip wrap" id="svvvd" aria-labelledby="svvvd-title">
+        <header class="case-top reveal">
+          <span class="case-num">06</span>
+          <span class="case-cat">E-commerce · Brand design · Real sales</span>
+          <span class="case-year">2026</span>
+        </header>
+        <div class="case-grid">
+          <div class="case-media reveal">
+            <figure class="shot shot-browser">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>semo-el.github.io/SVVVD-Y2K</span></div>
+              <img src="images/svvvd.webp" alt="SVVVD Y2K homepage with chrome pill logo and 'Wear it your way' headline" width="1600" height="825" loading="lazy" />
+            </figure>
+          </div>
+          <div class="case-body reveal">
+            <h3 id="svvvd-title" class="case-title">SVVVD Y2K</h3>
+            <p class="case-lead">My cousin's Y2K streetwear brand needed a site with the energy of the clothes. I built the store and the whole identity: cart, sizes, live stock, an email order pipeline, typography, palette and copy. It had real products, real customers and real money.</p>
+            <dl class="facts">
+              <div><dt>35</dt><dd>pieces across 3 colorways: Red Flag, Azul, Pinked</dd></div>
+              <div><dt>1&nbsp;day</dt><dd>from blank file to live store, with no framework</dd></div>
+              <div><dt>Sold out</dt><dd>The Azul colorway sold out</dd></div>
+            </dl>
+            <ul class="chips" aria-label="Stack"><li>HTML/CSS/JS</li><li>E-commerce</li><li>Brand identity</li><li>UX writing</li></ul>
+            <div class="case-actions">
+              <button class="btn btn-primary" type="button" data-case="svvvd" aria-label="Read the SVVVD Y2K case study">Read the case study</button>
+              <a class="btn btn-ghost" href="https://semo-el.github.io/SVVVD-Y2K/" target="_blank" rel="noopener" aria-label="SVVVD Y2K: live site (opens in a new tab)">Live <span aria-hidden="true">↗</span></a>
+              <a class="btn btn-ghost" href="https://github.com/SEMO-EL/SVVVD-Y2K" target="_blank" rel="noopener" aria-label="SVVVD Y2K: GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============================== MORE WORK ============================== -->
+    <section class="more wrap" id="more" aria-labelledby="more-title">
+      <div class="section-head reveal">
+        <p class="label">(02) More work</p>
+        <h2 id="more-title" class="h-lg">Films, worlds, tools<br /><em>and sites for real businesses.</em></h2>
+      </div>
+
+      <div class="grid">
+        <article class="card card-wide card-flip reveal" id="differential" aria-labelledby="differential-title">
+          <div class="card-media card-media-embed">
+            <iframe class="figure-embed" data-figure src="explainers/differential.html" title="Interactive open differential: move across the figure, or use the arrow keys, to steer" loading="lazy"></iframe>
+          </div>
+          <div class="card-body">
+            <p class="card-tag"><span class="badge badge-new">New</span> Interactive explainer · Oct 2026</p>
+            <h3 id="differential-title">How a differential works</h3>
+            <p>A car's open differential on a test bench, running live in the page. Move across it to steer: the gold spider gears start spinning on their pin, one wheel speeds up and the other slows down by exactly as much, and the ring gear keeps turning at their average.</p>
+            <p>Every number on the readout comes from the real gear ratios (a 41:11 ring and pinion, 16- and 10-tooth bevel gears) and a 1.6 m track. The whole machine is SVG redrawn every frame, and the drawing order of its 46 parts was checked by ray-casting about 7,000 overlaps at 48 angles.</p>
+            <ul class="chips"><li>SVG</li><li>Isometric projection</li><li>Gear kinematics</li><li>Vanilla JS</li></ul>
+            <p class="built built-sm">Built with Claude Code and its anatomy skill. I chose the subject; Claude designed the machine and wrote the code.</p>
+          </div>
+        </article>
+
+        <article class="card card-wide reveal" id="sia" aria-labelledby="sia-title">
+          <div class="card-media card-media-stack">
+            <div class="media-main">
+              <video class="card-video" src="images/sia-teaser.mp4" poster="images/sia-first-place.webp" width="1280" height="720" muted loop playsinline preload="none" aria-label="Silent 11-second excerpt from the SIA film: a football pitch animates into a '1st place' trophy card"></video>
+              <button class="video-toggle" type="button" aria-label="Pause video" hidden>
+                <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>
+                <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5Z"/></svg>
+              </button>
+            </div>
+            <div class="card-strip">
+              <img src="images/sia-what-we-do.webp" alt="Frame: 'What we do': Represent, Organize, Give back" width="1600" height="900" loading="lazy" />
+              <img src="images/sia-results.webp" alt="Frame: '100% success' with a ring chart" width="1600" height="900" loading="lazy" />
+              <img src="images/sia-end-card.webp" alt="Frame: SIA seal and 'Students in Action' end card" width="1600" height="900" loading="lazy" />
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-tag"><span class="badge badge-new">New</span> Motion design · Oct 2026</p>
+            <h3 id="sia-title">SIA: Students in Action</h3>
+            <p>Two motion-design films for SIA, the senior student board at GS Universalis in Casablanca: a 98-second story of their year (a charity tournament they won, bake sales, results) and a 32-second team reveal.</p>
+            <p>There's no editing software involved. Every frame is drawn in code on an HTML canvas, rendered through headless Chrome into ffmpeg, and the soundtrack is synthesised in code too.</p>
+            <ul class="chips"><li>Canvas 2D</li><li>Headless Chrome</li><li>ffmpeg</li><li>Web Audio synthesis</li></ul>
+            <p class="built built-sm">Built with Claude Code. I picked the story and the sources, and the brand palette was sampled from SIA's own posters.</p>
+          </div>
+        </article>
+
+        <article class="card card-wide card-flip reveal" id="mana" aria-labelledby="mana-title">
+          <div class="card-media">
+            <img src="images/mana-vessel-world.webp" alt="Mana Vessel gameplay at sunset: the hero with a staff in a field beside a forge and a watermill" width="1440" height="900" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-tag"><span class="badge badge-new">New</span> 3D action RPG · Sep – Oct 2026</p>
+            <h3 id="mana-title">Mana Vessel</h3>
+            <p>A third-person open-world action RPG that ships as one HTML file. It has a fan-made region inspired by the anime <i>Mushoku Tensei</i>, with terrain, a day/night sky, water, foliage, caves, a spell system (fire, water, wind, stone and healing), enemies, bosses, a map, dialogue and saves. This is Milestone 1, a vertical slice and not a finished game.</p>
+            <ul class="chips"><li>Three.js r170</li><li>Procedural terrain</li><li>Post-processing</li><li>Game AI</li></ul>
+            <p class="built built-sm">Built with an AI coding agent. A personal fan project, not commercial.</p>
+          </div>
+        </article>
+
+        <article class="card reveal" id="evenly" aria-labelledby="evenly-title">
+          <div class="card-media">
+            <img src="images/evenly.webp" alt="Evenly: a trip's expenses, per-person balances and a three-payment settle-up plan" width="1440" height="900" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-tag"><span class="badge badge-new">New</span> Tool · Sep 2026</p>
+            <h3 id="evenly-title">Evenly</h3>
+            <p>Split group expenses, then settle up in as few payments as possible. Money is stored in whole cents, and leftover cents are shared out fairly by largest remainder. Finding the true minimum number of payments is NP-hard, so it pairs exact matches first, then largest debt to largest credit.</p>
+            <ul class="chips"><li>Vanilla JS</li><li>Algorithms</li><li>Offline</li></ul>
+          </div>
+        </article>
+
+        <article class="card reveal" id="vector" aria-labelledby="vector-title">
+          <div class="card-media">
+            <img src="images/vector-strike.webp" alt="Vector Strike loadout menu over a coastal research facility map" width="1440" height="900" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-tag">Prototype · Sep 2026</p>
+            <h3 id="vector-title">Vector Strike</h3>
+            <p>My first browser tactical shooter: one map, four weapon archetypes, 5v5 against bots, plant and defuse, and touch controls for phones. It showed what a serious version would need: a deterministic simulation, abilities, an economy and smarter bots. That version became <a href="#ironline">Ironline</a>.</p>
+            <ul class="chips"><li>Three.js</li><li>Bots</li><li>Codex</li></ul>
+          </div>
+        </article>
+
+        <article class="card reveal" id="nakama" aria-labelledby="nakama-title">
+          <div class="card-media">
+            <img src="images/nakama.webp" alt="Nakama Store split hero: Black Dragon versus White Dragon katanas" width="1440" height="900" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-tag">Business site · Jun 2026</p>
+            <h3 id="nakama-title">Nakama Store</h3>
+            <p>Product site for a katana shop in Marrakech. A split "Black Dragon vs White Dragon" hero leads into details, a comparison, pricing and ordering through WhatsApp or Instagram.</p>
+            <a class="link" href="https://semo-el.github.io/Nakama_V2/" target="_blank" rel="noopener">Visit site <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card reveal" id="sunset" aria-labelledby="sunset-title">
+          <div class="card-media">
+            <img src="images/sunset.webp" alt="Sunset Event homepage: 'Des moments dehors, préparés avec douceur'" width="1440" height="900" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-tag">Business site · Jun 2026</p>
+            <h3 id="sunset-title">Sunset Event</h3>
+            <p>French-language site for an outdoor event-setup service around Casablanca (beach dinners, picnics, celebrations), with themed ambiances, packages, a gallery and WhatsApp booking.</p>
+            <a class="link" href="https://semo-el.github.io/Sunset/" target="_blank" rel="noopener">Visit site <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================== STORY ============================== -->
+    <section class="story wrap" id="story" aria-labelledby="story-title">
+      <div class="section-head reveal">
+        <p class="label">(03) The story</p>
+        <h2 id="story-title" class="h-lg">From a messy platformer<br /><em>to systems with a dozen moving parts.</em></h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="tl-date">2020 · Lockdown</span>
+          <div class="tl-body">
+            <h3>First real program</h3>
+            <p>I built a Mario-style 2D platformer during lockdown. It was messy and barely worked, but it was mine. That's when I understood software is something you make, not just something you use.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-date">Age 12 – 13</span>
+          <div class="tl-body">
+            <h3>Robotics &amp; the first click</h3>
+            <p>I entered my first World Robot Olympiad and got hooked. It wasn't really the robots. It was the loop of designing a system, testing it, watching it fail and fixing it. I've been chasing that loop ever since.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-date">2023 · Panama</span>
+          <div class="tl-body">
+            <h3>WRO International, first attempt <span class="tl-award">National winner</span></h3>
+            <p>I won Morocco's national WRO qualifiers on my first attempt and competed internationally in Panama. It showed me what's possible when you take something seriously, and how much I still had to learn.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-date">2024 – 25</span>
+          <div class="tl-body">
+            <h3>Shifting to software</h3>
+            <p>I taught myself web development with no bootcamp and no school, just documentation, experiments and stubbornness. PoseSandbox was my first real project, because I wanted to build something useful that people would find on their own.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-date">2026 · Houston</span>
+          <div class="tl-body">
+            <h3>FLL International with LOGIKO <span class="tl-award">1st place Morocco</span></h3>
+            <p>I led team LOGIKO to first place at Morocco's FLL qualifiers and a spot at the international championship in Houston. As the eldest and only experienced member, I guided a team of first-timers through the season, including building ArchaeoSmart from zero web knowledge.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-date">Spring – Summer 2026</span>
+          <div class="tl-body">
+            <h3>Backends, and sites for real businesses</h3>
+            <p>Workspace OS closed my backend gap. SVVVD, Nakama Store and Sunset Event meant building for people with real products and real customers, where a confusing button costs a sale.</p>
+          </div>
+        </li>
+        <li class="reveal tl-now">
+          <span class="tl-date">Sep – Oct 2026</span>
+          <div class="tl-body">
+            <h3>Local AI, and AI as a teammate</h3>
+            <p>I started building with AI coding agents. I decide what gets built, how it should behave and whether it actually works, and the agents write most of the code. That produced SimoAI, Ironline, the SIA films, Mana Vessel and Evenly, and made me much sharper at testing, scoping and system design.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-date">Now</span>
+          <div class="tl-body">
+            <h3>11th grade · Heading for computer science</h3>
+            <p>Twelve projects across AI systems, games, tools, PWAs, e-commerce and backends. I'm heading toward computer science, not because it's the safe answer, but because it's the thing that keeps pulling me back to the screen.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================== APPROACH ============================== -->
+    <section class="approach" id="approach" aria-labelledby="approach-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="label">(04) How I work</p>
+          <h2 id="approach-title" class="h-lg">Four rules I keep<br /><em>re-learning the hard way.</em></h2>
+        </div>
+
+        <blockquote class="pull reveal">
+          <p>“A menu entry is not a download. A download is not a working model. A working model is not a good result.”</p>
+          <footer>From building SimoAI</footer>
+        </blockquote>
+
+        <ol class="rules">
+          <li class="reveal">
+            <span class="rule-n">01</span>
+            <h3>Ship, then fix</h3>
+            <p>I built Workspace OS and SVVVD in a single day each. Not because I'm fast, but because I'd rather ship something real and fix it than plan forever and build nothing.</p>
+          </li>
+          <li class="reveal">
+            <span class="rule-n">02</span>
+            <h3>Evidence that matches the claim</h3>
+            <p>A passing mocked test isn't a saved file on Windows. The best fixes in SimoAI came from a specific reproduction, a narrow change, and a real check.</p>
+          </li>
+          <li class="reveal">
+            <span class="rule-n">03</span>
+            <h3>Systems over features</h3>
+            <p>Data models, constraints and failure modes come first: who owns what, what happens offline, and what the database refuses even if the UI is bypassed.</p>
+          </li>
+          <li class="reveal">
+            <span class="rule-n">04</span>
+            <h3>Direct the tools, own the result</h3>
+            <p>I use AI agents like a team: a clear brief, hard constraints, real tests. The code is only as good as the questions I ask and the bugs I catch, so I say plainly which projects were built that way.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section class="skills wrap" id="skills" aria-labelledby="skills-title">
+      <div class="section-head reveal">
+        <p class="label">(05) Skills</p>
+        <h2 id="skills-title" class="h-lg">What I can do,<br /><em>sorted honestly.</em></h2>
+      </div>
+
+      <div class="skill-grid">
+        <div class="skill-col reveal">
+          <h3>Comfortable with</h3>
+          <ul><li>HTML / CSS</li><li>Vanilla JavaScript</li><li>Responsive design</li><li>PWAs / service workers</li><li>Git / GitHub</li><li>UI / UX &amp; brand design</li></ul>
+        </div>
+        <div class="skill-col reveal">
+          <h3>Used in real projects</h3>
+          <ul><li>Three.js / WebGL</li><li>Supabase / PostgreSQL / RLS</li><li>Node.js servers</li><li>Canvas API</li><li>Web Speech API</li><li>Leaflet.js · QR scanning</li></ul>
+        </div>
+        <div class="skill-col reveal">
+          <h3>Local AI stack</h3>
+          <ul><li>Ollama · local LLMs</li><li>ComfyUI workflows</li><li>Qwen3 · Qwen3-Coder</li><li>Gemma 3 vision</li><li>FLUX · Qwen-Image · Wan</li><li>Model routing &amp; GPU budgets</li></ul>
+        </div>
+        <div class="skill-col reveal">
+          <h3>Learning now</h3>
+          <ul><li>Python</li><li>Data structures &amp; algorithms</li><li>Systems architecture</li><li>Backend APIs</li><li>TypeScript</li><li>How LLMs actually work</li></ul>
+        </div>
+      </div>
+
+      <dl class="stats">
+        <div class="reveal"><dt data-count="13">13</dt><dd>Projects built</dd></div>
+        <div class="reveal"><dt data-count="2">2</dt><dd>International competitions</dd></div>
+        <div class="reveal"><dt data-count="2">2</dt><dd>National titles</dd></div>
+        <div class="reveal"><dt data-count="0">0</dt><dd>Formal coding classes</dd></div>
+      </dl>
+      <p class="skills-note reveal">Everything here was learned by needing it for a project. Now I'm balancing that builder instinct with deliberate fundamentals (algorithms, data structures, backend architecture, Python), so I keep shipping while the reasoning behind each system gets sharper.</p>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="label reveal">(06) Contact</p>
+        <h2 id="contact-title" class="contact-title reveal">Let's build<br /><em>something real.</em></h2>
+        <p class="contact-sub reveal">Have a question, a competition, or an opportunity? I read everything.</p>
+        <ul class="contact-links">
+          <li class="reveal">
+            <a href="mailto:elomaris310@gmail.com">
+              <span class="cl-k">Email</span><span class="cl-v">elomaris310@gmail.com</span><span class="cl-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="https://www.instagram.com/e.l.o.m.a.r.i__/" target="_blank" rel="noopener">
+              <span class="cl-k">Instagram</span><span class="cl-v">@e.l.o.m.a.r.i__</span><span class="cl-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="https://github.com/SEMO-EL" target="_blank" rel="noopener">
+              <span class="cl-k">GitHub</span><span class="cl-v">SEMO-EL</span><span class="cl-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Simo · Casablanca, Morocco</span>
+      <span>Plain HTML, CSS &amp; JS · no frameworks · no build step</span>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       CASE STUDIES (native <dialog>; open with the buttons or #case/<id>)
+       ==================================================================== -->
+
+  <!-- ---------- SimoAI ---------- -->
+  <dialog class="cs" id="cs-simoai" aria-labelledby="cs-simoai-title">
+    <div class="cs-inner">
+      <div class="cs-top">
+        <p class="label">Case study · 01 · Local AI</p>
+        <button class="icon-btn cs-close" type="button" data-close aria-label="Close case study"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <header class="cs-head">
+        <h2 id="cs-simoai-title">SimoAI</h2>
+        <p class="cs-lead">I wanted my own AI assistant before the end of the year, starting with no AI knowledge at all. Within three weeks it was a local, multi-model app: one model plans, specialists do the work, and the interface tells the truth about what actually ran.</p>
+        <dl class="cs-meta">
+          <div><dt>When</dt><dd>25 Sep – 12 Oct 2026</dd></div>
+          <div><dt>My role</dt><dd>Product owner, tester, architect of the routing idea</dd></div>
+          <div><dt>Built with</dt><dd>An AI coding agent (Codex) writing the implementation</dd></div>
+          <div><dt>Hardware</dt><dd>i5-14500 · 32 GB RAM · RTX 5060 Ti 16 GB</dd></div>
+        </dl>
+      </header>
+      <figure class="cs-figure"><img src="images/simoai-home.webp" alt="SimoAI start screen: sidebar with conversations and assistant settings, 'What are we working on?' with starter prompts" width="1440" height="900" loading="lazy" /></figure>
+
+      <section class="cs-sec">
+        <h3>The first choice</h3>
+        <div>
+          <p>I started with two ideas: a personal chatbot, and a site called BuildAI that would teach beginners to build one. I built the real chatbot first, so that any course later would come from a real beginner's journey and not an invented one. I also dropped "train my own ChatGPT". The realistic goal was a local app built on existing open models.</p>
+          <p>We set the roles early. I would choose features, test, report failures and learn at a beginner's pace, and the agent would write the code and explain it. Almost every feature below exists because I tested something and it broke.</p>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>What it does</h3>
+        <ul class="cs-list">
+          <li><b>Chat</b> with Qwen3 14B through Ollama, entirely on the PC.</li>
+          <li><b>Auto mode</b>: Qwen3 14B plans up to six tasks across chat, code, vision, images, video, diagrams and motion graphics, and hands each one to a specialist.</li>
+          <li><b>Code</b> with Qwen3-Coder 30B, split across GPU and system RAM.</li>
+          <li><b>Vision</b> with Gemma 3 12B for image attachments.</li>
+          <li><b>PDF reading</b>: extracts selectable text (up to 50 pages / 50,000 characters) and renders the first five pages for a vision model when a PDF is scanned.</li>
+          <li><b>Images</b> with Qwen-Image 2.1 and FLUX.1 Schnell, and <b>video</b> with Wan 2.2 (text-to-video and image-to-video), all through ComfyUI.</li>
+          <li><b>History</b> in IndexedDB. Every conversation keeps its own model and settings and can be searched, renamed or exported as Markdown.</li>
+          <li><b>One-click start</b> from a desktop shortcut, and a Quit button that shuts down only the processes SimoAI itself started.</li>
+        </ul>
+      </section>
+
+      <section class="cs-sec">
+        <h3>How the system works</h3>
+        <div>
+          <div class="flow" role="img" aria-label="Diagram: browser UI sends a request to the Node.js server; the Qwen3 router plans tasks; an orchestrator and GPU queue run them on Ollama, ComfyUI or an exact renderer; results stream back to the UI.">
+            <div class="flow-row"><span class="node">Browser UI</span><span class="node">Node.js server</span><span class="node node-accent">Router<br>Qwen3 14B</span><span class="node">Orchestrator<br>+ GPU queue</span></div>
+            <div class="flow-split">
+              <div class="flow-col"><span class="flow-h">Ollama</span><span class="node sm">Qwen3 · chat</span><span class="node sm">Qwen3-Coder · code</span><span class="node sm">Gemma 3 · vision</span></div>
+              <div class="flow-col"><span class="flow-h">ComfyUI</span><span class="node sm">Qwen-Image · FLUX</span><span class="node sm">Wan 2.2 · video</span><span class="node sm dim">LTX-2.5 · not installed</span></div>
+              <div class="flow-col"><span class="flow-h">Exact renderer</span><span class="node sm">Diagrams</span><span class="node sm">Shape animation</span></div>
+            </div>
+          </div>
+          <p>The GPU queue matters most. A 16 GB card can't hold a 30B coder, an image model and a video model at once, so jobs run one at a time and idle image models are released before text work. Each result is shown the moment it's ready, so a slow video never blocks the written answer.</p>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Made on my GPU</h3>
+        <div>
+          <figure class="cs-pair">
+            <img src="images/simoai-qwen-image.webp" alt="Photorealistic grey tabby kitten looking up, generated locally by Qwen-Image 2.1" width="800" height="800" loading="lazy" />
+            <img src="images/simoai-mobile.webp" alt="SimoAI on a narrow screen: the circle formula answer followed by the rendered diagram" width="390" height="844" loading="lazy" />
+            <figcaption>Left: an image generated entirely on my PC by Qwen-Image 2.1 through SimoAI, with no cloud involved. Right: the app's responsive layout on a phone-sized screen.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Three bugs that shaped it</h3>
+        <div class="cs-cards">
+          <div class="cs-card">
+            <p class="cs-card-k">The circle request</p>
+            <p>I asked Auto mode to explain the area of a circle, draw a blue circle with the formula, and animate a dot growing into a circle. I got an unrelated office scene and lost the written answer. <b>Fix:</b> requests are split into explicit tasks, the text answer comes first, and exact geometry goes to a precise renderer instead of a diffusion model. The same request then finished in 48 seconds with all three outputs.</p>
+          </div>
+          <div class="cs-card">
+            <p class="cs-card-k">The 40-minute video</p>
+            <p>One "quality" run spent about 33 minutes inside Wan rendering 121 frames at 1280×1216. <b>Fix:</b> a 25.6-million pixel-frame budget, roughly 2-second defaults, and GPU text encoding with offload. A controlled 49-frame test dropped from about 3 min 20 s to 2 min 22 s. That's faster, though the video quality still isn't where I want it.</p>
+          </div>
+          <div class="cs-card">
+            <p class="cs-card-k">The save that "passed"</p>
+            <p>A generated image failed to save with a Windows permission error. The first fix passed a mocked test and then failed a real one. <b>Fix:</b> ComfyUI's input, temp and output folders were moved inside the project, with read-only access kept for older images. It was verified with a real generation through SimoAI's own API, and 19 of 19 tests passed.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Measured, not assumed</h3>
+        <div>
+          <p>I set up a head-to-head on a parser task, and a free cloud chatbot clearly beat SimoAI. Instead of concluding "local models are bad", we built a small benchmark: eight JavaScript tasks with hidden test groups, one attempt each, temperature 0, fixed seed.</p>
+          <div class="meter" role="img" aria-label="Qwen3-Coder 30B passed 52 of 65 hidden test groups, 80 percent">
+            <div class="meter-bar"><span style="--v:80%"></span></div>
+            <p><b>52 / 65</b> hidden test groups · <b>4 / 8</b> tasks fully passed</p>
+          </div>
+          <p>It was strong on an LRU cache, interval merging, dependency sorting and safe nested lookup, and weak on command parsing, a CSV edge case, debounce and deep equality. It's a small local benchmark, not a leaderboard. The lesson is that it's good for routine code, but its output still needs tests, especially around parsers.</p>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Honest limits</h3>
+        <ul class="cs-list">
+          <li><b>LTX-2.5 video</b> is fully wired into the app, but its gated weights were never installed, so the UI reports it as unavailable instead of pretending.</li>
+          <li><b>Video quality</b> is still the weakest part. A finished MP4 proves the pipeline ran, not that the motion looks good.</li>
+          <li><b>An 80B coding model</b> didn't fit: it needed about 38 GiB of system RAM on a PC with 31.7. I removed it and wrote down why.</li>
+          <li>I never weakened Windows security or pasted secrets to make something run, even when that was the shortcut.</li>
+        </ul>
+      </section>
+
+      <section class="cs-sec">
+        <h3>What I learned</h3>
+        <div>
+          <p>A useful AI assistant is a system, not one giant model. It needs an interface, model runners, data handling, status checks, safe credentials, routing, media storage and tests. A router model can coordinate everything, but only if it keeps every deliverable the user asked for and makes dependencies explicit.</p>
+          <p>Most of all, I learned to use evidence that matches the claim. A menu entry isn't a download, a download isn't a working inference, and a working inference isn't a good result.</p>
+        </div>
+      </section>
+    </div>
+  </dialog>
+
+  <!-- ---------- Ironline ---------- -->
+  <dialog class="cs" id="cs-ironline" aria-labelledby="cs-ironline-title">
+    <div class="cs-inner">
+      <div class="cs-top">
+        <p class="label">Case study · 02 · Game</p>
+        <button class="icon-btn cs-close" type="button" data-close aria-label="Close case study"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <header class="cs-head">
+        <h2 id="cs-ironline-title">Ironline</h2>
+        <p class="cs-lead">How close can a browser get to a competitive tactical shooter? Ironline is an original 5v5 plant-and-defuse game with abilities, an economy and bots that trade, lurk and save. Every name, model and sound in it is original.</p>
+        <dl class="cs-meta">
+          <div><dt>When</dt><dd>Sep – Oct 2026</dd></div>
+          <div><dt>My role</dt><dd>Game direction, scope, acceptance</dd></div>
+          <div><dt>Built with</dt><dd>An AI coding agent (Claude Code)</dd></div>
+          <div><dt>Stack</dt><dd>TypeScript · Vite · Three.js · Web Audio · WebSockets</dd></div>
+        </dl>
+      </header>
+      <figure class="cs-figure"><img src="images/ironline-menu.webp" alt="Ironline main menu" width="1440" height="900" loading="lazy" /></figure>
+
+      <section class="cs-sec">
+        <h3>Where it came from</h3>
+        <div>
+          <p>The first attempt, <b>Vector Strike</b>, had one map, four weapons and solo play against bots. It was fun, and it showed exactly what was missing. Rules lived inside the rendering code, bots were easy to read, and nothing could be tested without playing. Ironline started from those lessons, with a clean-room rule: inspired by the genre, but every asset and name original.</p>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Architecture</h3>
+        <div>
+          <div class="flow" role="img" aria-label="Diagram: input feeds a deterministic 128 Hz simulation; bots and the network layer feed the same simulation; the renderer and audio only read its state.">
+            <div class="flow-row"><span class="node">Input</span><span class="node node-accent">Simulation<br>128 Hz, deterministic</span><span class="node">Renderer<br>Three.js</span></div>
+            <div class="flow-split">
+              <div class="flow-col"><span class="flow-h">Writes to sim</span><span class="node sm">Bots · nav grid</span><span class="node sm">Net · host-authoritative</span></div>
+              <div class="flow-col"><span class="flow-h">Reads from sim</span><span class="node sm">HUD &amp; minimap</span><span class="node sm">Spatial audio</span></div>
+              <div class="flow-col"><span class="flow-h">Checks the sim</span><span class="node sm">Automated tests</span><span class="node sm">Balance tools</span></div>
+            </div>
+          </div>
+          <p>The key decision was that the game rules know nothing about graphics. The simulation is a pure, deterministic step at 128 ticks per second. Rendering, sound and the HUD only read it. That makes rounds reproducible, lets bots be balanced by simulating rounds headlessly, and keeps multiplayer simple, because the host runs the same simulation everyone sees.</p>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>What's in it</h3>
+        <ul class="cs-list">
+          <li><b>3 maps</b> (Foundry, Terminal, Skybridge), <b>5 agents</b> with four abilities each, <b>9 weapons</b> plus a blade.</li>
+          <li>A full 13-round match with side swap and overtime, a credit economy, and buy, plant and defuse phases.</li>
+          <li>Bots from Easy to Elite that trade kills, lurk and save. There's also a practice range with drills and live accuracy stats.</li>
+          <li>Fixed recoil patterns, movement inaccuracy, wall penetration, killcam, rebindable keys and career stats.</li>
+          <li>Audio is all generated in code: per-weapon gunshots, HRTF positioning, wall muffling, reverb and a menu music loop.</li>
+          <li>LAN multiplayer through a dependency-free WebSocket server.</li>
+        </ul>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Honest limits</h3>
+        <ul class="cs-list">
+          <li>Multiplayer has no client prediction or lag compensation. That's fine on a LAN, but not ready for the internet.</li>
+          <li>Feel (mouse, recoil, sound) was tuned more by numbers than by long playtesting.</li>
+          <li>The only downloaded art is a few public-domain (CC0) surface textures. Everything else is generated, which shows up close.</li>
+        </ul>
+      </section>
+
+      <section class="cs-sec">
+        <h3>What I learned</h3>
+        <div><p>Separating "what is true" (the simulation) from "what you see" (rendering) is what makes a complex real-time system testable. Without it, the only way to find a bug is to play until it happens.</p></div>
+      </section>
+    </div>
+  </dialog>
+
+  <!-- ---------- ArchaeoSmart ---------- -->
+  <dialog class="cs" id="cs-archaeosmart" aria-labelledby="cs-archaeosmart-title">
+    <div class="cs-inner">
+      <div class="cs-top">
+        <p class="label">Case study · 03 · FLL innovation project</p>
+        <button class="icon-btn cs-close" type="button" data-close aria-label="Close case study"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <header class="cs-head">
+        <h2 id="cs-archaeosmart-title">ArchaeoSmart</h2>
+        <p class="cs-lead">Archaeological field teams record findings on paper, which is fragile, unstructured, and impossible to search or share. Our FLL innovation project was a tool that actually works in the field: offline, on a phone.</p>
+        <dl class="cs-meta">
+          <div><dt>When</dt><dd>2025 – 26 season</dd></div>
+          <div><dt>Team</dt><dd>LOGIKO (I led a team of first-timers)</dd></div>
+          <div><dt>Result</dt><dd>1st place Morocco · FLL International, Houston</dd></div>
+          <div><dt>Stack</dt><dd>HTML/CSS/JS · PWA · Leaflet · Web Speech</dd></div>
+        </dl>
+      </header>
+
+      <section class="cs-sec">
+        <h3>What I built</h3>
+        <div><p>A mobile-first Progressive Web App with voice-guided artifact recording, GPS geo-tagging, QR label generation and scanning, canvas drawing for site sketches, CSV export, a map view and a statistics dashboard. It's entirely client-side, with no server, and it works offline.</p></div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>How the system works</h3>
+        <div>
+          <div class="trio">
+            <div><p class="cs-card-k">Input</p><p>Voice answers, form data, GPS location, QR scans, canvas sketches</p></div>
+            <div><p class="cs-card-k">Storage</p><p>Artifact records are serialised locally, so the app keeps working without internet</p></div>
+            <div><p class="cs-card-k">Retrieval</p><p>QR codes and searchable IDs reconnect physical finds to their digital record</p></div>
+          </div>
+          <p>The main constraint was reliability in the field. The app had to keep collecting data when the network disappeared, so I treated offline behaviour as the core architecture, not a bonus feature.</p>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Hardest challenge</h3>
+        <div><p>The voice-guided form, where the app asks questions and you answer by speaking. Getting the Web Speech API to behave consistently on iOS and Android was brutal. Safari handles audio permissions completely differently from Chrome, and stopping continuous recognition from cutting off mid-answer took weeks of refinement. We got it working.</p></div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Limitations I'd fix</h3>
+        <div><p>Data lives in localStorage and is lost if it's cleared. A production version needs a sync queue, a remote database, user accounts, and conflict resolution for two people editing the same artifact offline. I'd start with an event log, then compare it with CRDT-style merging if collaboration became central.</p></div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>What I learned</h3>
+        <div><p>Building something real forces you to understand things you'd never look up voluntarily. I had zero web experience when this started, and so did my teammates. Needing it to work in a field taught me more than any tutorial could.</p></div>
+      </section>
+    </div>
+  </dialog>
+
+  <!-- ---------- Workspace OS ---------- -->
+  <dialog class="cs" id="cs-workspace" aria-labelledby="cs-workspace-title">
+    <div class="cs-inner">
+      <div class="cs-top">
+        <p class="label">Case study · 04 · Backend</p>
+        <button class="icon-btn cs-close" type="button" data-close aria-label="Close case study"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <header class="cs-head">
+        <h2 id="cs-workspace-title">Workspace OS</h2>
+        <p class="cs-lead">Every project I'd made before was purely frontend, with no database, no auth and no server. I knew that gap would limit me, so I built something specifically to close it.</p>
+        <dl class="cs-meta">
+          <div><dt>When</dt><dd>2026 · built in one day</dd></div>
+          <div><dt>Why</dt><dd>Deliberate practice: learn how backends really work</dd></div>
+          <div><dt>Stack</dt><dd>Supabase · PostgreSQL · RLS · JavaScript</dd></div>
+        </dl>
+      </header>
+
+      <section class="cs-sec">
+        <h3>What I built</h3>
+        <div><p>A multi-tenant SaaS workspace system with email/password authentication, workspace creation and deletion, roles (Owner vs Member), invite codes, projects and tasks with priority levels, and a full audit log.</p></div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>System design</h3>
+        <div>
+          <div class="trio">
+            <div><p class="cs-card-k">Entities</p><p>Users, workspaces, memberships, projects, tasks, audit logs</p></div>
+            <div><p class="cs-card-k">Relationships</p><p>Users join many workspaces; workspaces own projects; projects own tasks</p></div>
+            <div><p class="cs-card-k">Invariant</p><p>A user must never read or change data outside their workspace membership</p></div>
+          </div>
+          <p>Supabase handles auth and PostgreSQL storage. Row-Level Security enforces workspace isolation in the database, not only in the UI. The key insight was that permissions are part of the data model: if the frontend is bypassed, the database should still reject unauthorised access.</p>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>What I learned</h3>
+        <div><p>The hardest part wasn't the code. It was thinking in data relationships. Who owns what? How do you stop a Member from deleting an Owner's project? Those aren't coding questions, they're systems design questions, and that shift in thinking was the whole point.</p></div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Tradeoffs &amp; next step</h3>
+        <div><p>Supabase let me learn auth, relational data and RLS quickly, but it ties the project to platform-specific policies. Next I'd add real-time collaboration, email invites, pagination for large workspaces, and server-side functions for actions that shouldn't live in client code.</p></div>
+      </section>
+    </div>
+  </dialog>
+
+  <!-- ---------- PoseSandbox ---------- -->
+  <dialog class="cs" id="cs-posesandbox" aria-labelledby="cs-posesandbox-title">
+    <div class="cs-inner">
+      <div class="cs-top">
+        <p class="label">Case study · 05 · 3D tool</p>
+        <button class="icon-btn cs-close" type="button" data-close aria-label="Close case study"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <header class="cs-head">
+        <h2 id="cs-posesandbox-title">PoseSandbox</h2>
+        <p class="cs-lead">Digital artists need fast 3D pose references, but most tools are expensive desktop software or clunky web ports. I wanted something that opens instantly, needs no account, and exports an image without friction.</p>
+        <dl class="cs-meta">
+          <div><dt>When</dt><dd>2024 – 25 · my first website</dd></div>
+          <div><dt>Stack</dt><dd>Three.js · WebGL · transform controls</dd></div>
+        </dl>
+      </header>
+
+      <section class="cs-sec">
+        <h3>How the system works</h3>
+        <div>
+          <div class="trio">
+            <div><p class="cs-card-k">UI layer</p><p>Tool buttons, mode switching, save/load, reference image controls, export</p></div>
+            <div><p class="cs-card-k">Interaction layer</p><p>Mouse input becomes 3D intent through raycasting, selection and transform controls</p></div>
+            <div><p class="cs-card-k">Render layer</p><p>Three.js scene, camera, lights, body parts, props and the redraw loop</p></div>
+          </div>
+          <div class="steps" aria-label="Data flow">
+            <span>Click</span><span>Raycast</span><span>Select joint</span><span>Transform</span><span>Render</span><span>Export / Save</span>
+          </div>
+          <p>The engineering problem wasn't displaying a 3D model. It was turning a 2D action (a click or a drag) into a predictable 3D manipulation, while keeping camera movement, joint selection and transforms from fighting each other.</p>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Why Three.js</h3>
+        <div><p>Raw WebGL would have meant spending the project on shaders and buffers. Three.js gave me a scene graph, camera controls, lighting and loaders, so I could focus on the harder product problem: making 3D interaction understandable to non-technical users.</p></div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Tradeoffs</h3>
+        <div><p>The first version uses a hand-built joint hierarchy instead of a full skeletal rig. That made it buildable as a first 3D app, but rotations can feel mechanical, and complex poses need more manual work than inverse kinematics would.</p></div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>What I learned</h3>
+        <div><p>Interactive tools are mostly state problems: what's selected, which mode is active, whether you're moving the camera or the model, and what gets saved. Confusing internal state creates a confusing user experience.</p></div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>What I'd do differently</h3>
+        <div><p>I'd use a real skeletal rig with inverse kinematics, add undo/redo through state snapshots, separate rendering logic from UI logic more cleanly, and add performance guardrails for heavier scenes.</p></div>
+      </section>
+    </div>
+  </dialog>
+
+  <!-- ---------- SVVVD ---------- -->
+  <dialog class="cs" id="cs-svvvd" aria-labelledby="cs-svvvd-title">
+    <div class="cs-inner">
+      <div class="cs-top">
+        <p class="label">Case study · 06 · E-commerce</p>
+        <button class="icon-btn cs-close" type="button" data-close aria-label="Close case study"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <header class="cs-head">
+        <h2 id="cs-svvvd-title">SVVVD Y2K</h2>
+        <p class="cs-lead">My cousin had a real Y2K-influenced streetwear brand and needed a site that matched the energy of the clothes. This wasn't practice: it had real products, real customers and real money.</p>
+        <dl class="cs-meta">
+          <div><dt>When</dt><dd>2026 · built in one day</dd></div>
+          <div><dt>Scope</dt><dd>Store + complete brand identity</dd></div>
+          <div><dt>Stack</dt><dd>HTML, CSS, vanilla JS: no framework, no template</dd></div>
+        </dl>
+      </header>
+
+      <section class="cs-sec">
+        <h3>What I built</h3>
+        <div><p>A full e-commerce site with a cart, size selection, live stock tracking, an order pipeline via email, and a complete identity: typography, palette, copy and layout. It has 35 pieces across three colorways (Red Flag, Azul, Pinked), and Azul sold out.</p></div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>Product logic</h3>
+        <div>
+          <div class="trio">
+            <div><p class="cs-card-k">Cart</p><p>Size and colour choices update the order state before checkout</p></div>
+            <div><p class="cs-card-k">Stock</p><p>Inventory status shows early, so nobody picks an unavailable item</p></div>
+            <div><p class="cs-card-k">Order</p><p>An email-based pipeline keeps it simple while supporting real purchases</p></div>
+          </div>
+          <p>This is less about deep CS and more about product engineering: reducing friction, showing trust signals, and building the smallest system that supports real customer intent.</p>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <h3>What it taught me</h3>
+        <div><p>Design decisions are business decisions. Every layout choice, line of copy and colour affects whether someone buys or bounces. Engineering and design aren't separate disciplines.</p></div>
+      </section>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
